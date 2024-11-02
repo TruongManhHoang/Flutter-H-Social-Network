@@ -13,6 +13,8 @@ class AppKeys {
   static const String lastLoginKey = 'lastLogin';
   static const String lastUsername = 'username';
   static const String lastEmail = 'email';
+  static const String token = 'token';
+  static const String userId = 'userId';
 }
 
 class WidgetKeys {

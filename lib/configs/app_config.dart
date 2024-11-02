@@ -4,7 +4,7 @@ class AppConfig {
   static const String defaultLocale = 'en';
 
   static void configDev() {
-    baseUrl = 'https://api-retail.connectpos.com';
+    baseUrl = 'http://localhost:8080/api';
   }
 
   static void configTest() {

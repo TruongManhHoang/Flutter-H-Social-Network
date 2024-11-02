@@ -1,5 +1,6 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:boilerplate/features/login/bloc/login_bloc.dart';
+import 'package:boilerplate/features/user/view/register_user_page.dart';
 import 'package:boilerplate/generated/l10n.dart';
 import 'package:boilerplate/injector/injector.dart';
 import 'package:boilerplate/router/app_router.dart';
@@ -16,26 +17,26 @@ class LoginPage extends StatelessWidget {
     return BlocProvider<LoginBloc>(
       create: (context) => Injector.instance<LoginBloc>(),
       child: const Scaffold(
-        appBar: _AppBar(),
+        // appBar: _AppBar(),
         body: _Body(),
       ),
     );
   }
 }
 
-class _AppBar extends StatelessWidget implements PreferredSizeWidget {
-  const _AppBar();
+// class _AppBar extends StatelessWidget implements PreferredSizeWidget {
+//   const _AppBar();
 
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      title: Text(S.current.login),
-    );
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return AppBar(
+//       title: Text(S.current.login),
+//     );
+//   }
 
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-}
+//   @override
+//   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+// }
 
 class _Body extends StatelessWidget {
   const _Body();
@@ -67,7 +68,7 @@ class _Body extends StatelessWidget {
         builder: (context, state) {
           return Stack(
             children: [
-              _buildLoginForm(context, state.username, state.password),
+              _buildLoginForm(context, state.email, state.password),
               if (state.loading) const LoadingPage(),
             ],
           );
@@ -76,40 +77,109 @@ class _Body extends StatelessWidget {
     );
   }
 
-  Widget _buildLoginForm(BuildContext context, String username, String password) {
+  Widget _buildLoginForm(
+      BuildContext context, String username, String password) {
     return Center(
       child: Container(
-        width: 300,
-        child: Column(
-          children: [
-            TextFormField(
-              decoration: InputDecoration(
-                  hintText: S.current.username
-              ),
-              initialValue: username,
-              onChanged: (value) {
-                context.read<LoginBloc>().add(LoginEvent.changeUsername(value));
-              },
+          width: 300,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Image.asset(
+                //   'assets/images/1.jpg',
+                //   width: 250,
+                //   height: 100,
+                // ),
+                // const SizedBox(
+                //   height: 10,
+                // ),
+                const Text(
+                  'HRM',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                      hintText: S.current.username,
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                  initialValue: username,
+                  onChanged: (value) {
+                    context
+                        .read<LoginBloc>()
+                        .add(LoginEvent.changeEmail(value));
+                  },
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                      hintText: S.current.password,
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                  obscureText: true,
+                  initialValue: password,
+                  onChanged: (value) {
+                    context
+                        .read<LoginBloc>()
+                        .add(LoginEvent.changePassword(value));
+                  },
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 47, 141, 212),
+                        foregroundColor: Colors.white,
+                        minimumSize: const Size(307, 50),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(9))),
+                    onPressed: () {
+                      context.read<LoginBloc>().add(const LoginEvent.login());
+                    },
+                    child: Text(
+                      S.current.login,
+                      style: TextStyle(fontSize: 16),
+                    )),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  'Forgot Password? Get support',
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 47, 141, 212), fontSize: 15),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    // context.push(AppRouter.registerUserPath);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => RegisterUserPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Are you have account? Register',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 47, 141, 212),
+                      fontSize: 15,
+                    ),
+                  ),
+                )
+              ],
             ),
-            TextFormField(
-              decoration: InputDecoration(
-                  hintText: S.current.password
-              ),
-              obscureText: true,
-              initialValue: password,
-              onChanged: (value) {
-                context.read<LoginBloc>().add(LoginEvent.changePassword(value));
-              },
-            ),
-            ElevatedButton(
-              onPressed: () {
-                context.read<LoginBloc>().add(const LoginEvent.login());
-              },
-              child: Text(S.current.login)
-            )
-          ],
-        ),
-      ),
+          )),
     );
   }
 }

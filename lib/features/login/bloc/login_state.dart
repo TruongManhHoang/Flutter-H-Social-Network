@@ -6,7 +6,7 @@ class LoginState with _$LoginState {
     @Default(UIInitial()) UIStatus status,
     LoginNotification? notification,
     @Default(false) bool loading,
-    @Default('') String username,
+    @Default('') String email,
     @Default('') String password,
     @Default(false) bool isSuccess,
   }) = _LoginState;
