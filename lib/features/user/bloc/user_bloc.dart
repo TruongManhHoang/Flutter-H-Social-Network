@@ -28,6 +28,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     on<_getUser>(_onGetUser);
     on<_newUser>(_onNewUser);
     on<_searchUser>(_onSearchUser);
+    on<_followUser>(_onFollowUser);
     on<_updateProfileUser>(_onUpdateProfileUser);
     on<_getProfileUser>(_onGetProfileUser);
     on<_changeFirstName>(_onChangeFirstName);
@@ -37,6 +38,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     on<_changePassword>(_onChangePassword);
     on<_changeClientUser>(_onChangeClientUser);
     on<_changeId>(_onChangeId);
+    on<_changeUserId>(_onChangeUserId);
   }
 
   void _onGetUser(_getUser event, Emitter<UserState> emit) async {
@@ -91,7 +93,9 @@ class UserBloc extends Bloc<UserEvent, UserState> {
           email: state.email,
           password: state.password,
           gender: state.gender,
-          savedPosts: []);
+          savedPosts: [],
+          followers: [],
+          followings: []);
 
       String token = _localStorageService.getString(key: AppKeys.token) ?? '';
       dynamic payload = user.toJson();
@@ -129,7 +133,9 @@ class UserBloc extends Bloc<UserEvent, UserState> {
           email: state.email.isNotEmpty ? state.email : currentUser.email,
           password: currentUser.password,
           gender: state.gender.isNotEmpty ? state.gender : currentUser.gender,
-          savedPosts: []);
+          savedPosts: currentUser.savedPosts,
+          followers: currentUser.followers,
+          followings: currentUser.followings);
 
       dynamic payload = user.toJson();
       dynamic response = await _userService.updateProfileUser(token, payload);
@@ -148,6 +154,16 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     }
   }
 
+  void _onFollowUser(_followUser event, Emitter<UserState> emit) async {
+    try {
+      String token = _localStorageService.getString(key: AppKeys.token) ?? '';
+      dynamic response = await _userService.followUser(token, state.userId);
+    } catch (e) {
+      emit(state.copyWith(
+          notification: _$NotificationInsertFailedImpl(message: 'Error $e')));
+    }
+  }
+
   void _onSearchUser(_searchUser event, Emitter<UserState> emit) {
     if (event.name.trim().isEmpty) {
       emit(state.copyWith(searchUsers: []));
@@ -162,6 +178,14 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   void _onChangeClientUser(_changeClientUser event, Emitter<UserState> emit) {
     try {
       emit(state.copyWith(clientUser: event.clientUser));
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  void _onChangeUserId(_changeUserId event, Emitter<UserState> emit) {
+    try {
+      emit(state.copyWith(userId: event.userId));
     } catch (e) {
       rethrow;
     }

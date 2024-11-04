@@ -3,13 +3,13 @@ import 'dart:ffi';
 
 import 'package:dio/dio.dart';
 
-class UserService {
-  const UserService({required this.dio});
+class ReelService {
+  const ReelService({required this.dio});
   final Dio dio;
 
-  Future<dynamic> getUser(String token) async {
+  Future<dynamic> getAllReel(String token) async {
     try {
-      final res = await dio.get('/users',
+      final res = await dio.get('/reels',
           options: Options(headers: {'Authorization': 'Bearer $token'}));
       return res;
     } catch (e) {
@@ -17,12 +17,11 @@ class UserService {
     }
   }
 
-  Future<dynamic> createUser(String token, Map<String, dynamic> data) async {
+  Future<dynamic> createReel(String token, Map<String, dynamic> data) async {
     try {
-      final res = await dio.post(
-        '/users',
-        data: data,
-      );
+      final res = await dio.post('/reels',
+          data: data,
+          options: Options(headers: {'Authorization': 'Bearer $token'}));
       return res;
     } catch (e) {
       rethrow;

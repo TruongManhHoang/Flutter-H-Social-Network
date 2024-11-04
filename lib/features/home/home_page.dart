@@ -15,6 +15,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:video_player/video_player.dart';
+// import 'package:video_player_media_kit/video_player_media_kit.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -141,9 +142,17 @@ class __BodyState extends State<_Body> {
   File? _image;
   bool isLiked = false;
   bool isLikedComment = false;
+  late VideoPlayerController _controller;
+  late ChewieController _chewieController;
 
   bool showComment = false;
   final cloudinaryService = CloudinaryService();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   void openForm() {
     String? selectedImageUrl;
@@ -330,6 +339,12 @@ class __BodyState extends State<_Body> {
   //     });
   // }
 
+  // @override
+  // void dispose() {
+  //   videoPlayerController.dispose(); // Đảm bảo hủy bộ điều khiển video
+  //   super.dispose();
+  // }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -471,34 +486,27 @@ class __BodyState extends State<_Body> {
                               fit: BoxFit.cover,
                             )
                           else if (post.video.isNotEmpty)
-                            AspectRatio(
-                              aspectRatio: 16 / 9,
-                              child: Chewie(
-                                controller: ChewieController(
-                                  videoPlayerController:
-                                      VideoPlayerController.network(post.video),
-                                  aspectRatio: 16 / 9,
-                                  autoPlay: true,
-                                  looping: true,
-                                ),
-                              ),
-                            )
-                          else
+                            // AspectRatio(
+                            //   aspectRatio: 16 / 9,
+                            //   child: Chewie(
+                            //     controller: ChewieController(
+                            //       videoPlayerController:
+                            //           VideoPlayerController.networkUrl(
+                            //         Uri.parse(post.video),
+                            //       )..initialize().then((_) {
+                            //               if (context.mounted) {
+                            //                 setState(() {});
+                            //               }
+                            //             }),
+                            //       aspectRatio: 16 / 9,
+                            //       autoPlay: true,
+                            //       looping: true,
+                            //     ),
+                            //   ),
+                            // )
+                            // else
                             const SizedBox
                                 .shrink(), // Nếu không có hình ảnh hoặc video
-                          //   AspectRatio(
-                          //     aspectRatio: 16 / 9,
-                          //     child: Chewie(
-                          //         controller: ChewieController(
-                          //       videoPlayerController:
-                          //           VideoPlayerController.network(post.video),
-                          //       aspectRatio: 16 / 9,
-                          //       autoPlay: true,
-                          //       looping: true,
-                          //     )),
-                          //   )
-                          // else
-                          //   const SizedBox.shrink(),
                           Row(
                             children: [
                               IconButton(

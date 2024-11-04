@@ -18,39 +18,51 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ReelEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPost,
-    required TResult Function() newPost,
+    required TResult Function() getReel,
+    required TResult Function() newReel,
+    required TResult Function(String title) changeTitle,
+    required TResult Function(String video) changeVideo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPost,
-    TResult? Function()? newPost,
+    TResult? Function()? getReel,
+    TResult? Function()? newReel,
+    TResult? Function(String title)? changeTitle,
+    TResult? Function(String video)? changeVideo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPost,
-    TResult Function()? newPost,
+    TResult Function()? getReel,
+    TResult Function()? newReel,
+    TResult Function(String title)? changeTitle,
+    TResult Function(String video)? changeVideo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_getPost value) getPost,
-    required TResult Function(_newPost value) newPost,
+    required TResult Function(_getReel value) getReel,
+    required TResult Function(_newReel value) newReel,
+    required TResult Function(_ChangeTitle value) changeTitle,
+    required TResult Function(_ChangeVideo value) changeVideo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_getPost value)? getPost,
-    TResult? Function(_newPost value)? newPost,
+    TResult? Function(_getReel value)? getReel,
+    TResult? Function(_newReel value)? newReel,
+    TResult? Function(_ChangeTitle value)? changeTitle,
+    TResult? Function(_ChangeVideo value)? changeVideo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_getPost value)? getPost,
-    TResult Function(_newPost value)? newPost,
+    TResult Function(_getReel value)? getReel,
+    TResult Function(_newReel value)? newReel,
+    TResult Function(_ChangeTitle value)? changeTitle,
+    TResult Function(_ChangeVideo value)? changeVideo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -77,18 +89,18 @@ class _$ReelEventCopyWithImpl<$Res, $Val extends ReelEvent>
 }
 
 /// @nodoc
-abstract class _$$getPostImplCopyWith<$Res> {
-  factory _$$getPostImplCopyWith(
-          _$getPostImpl value, $Res Function(_$getPostImpl) then) =
-      __$$getPostImplCopyWithImpl<$Res>;
+abstract class _$$getReelImplCopyWith<$Res> {
+  factory _$$getReelImplCopyWith(
+          _$getReelImpl value, $Res Function(_$getReelImpl) then) =
+      __$$getReelImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$getPostImplCopyWithImpl<$Res>
-    extends _$ReelEventCopyWithImpl<$Res, _$getPostImpl>
-    implements _$$getPostImplCopyWith<$Res> {
-  __$$getPostImplCopyWithImpl(
-      _$getPostImpl _value, $Res Function(_$getPostImpl) _then)
+class __$$getReelImplCopyWithImpl<$Res>
+    extends _$ReelEventCopyWithImpl<$Res, _$getReelImpl>
+    implements _$$getReelImplCopyWith<$Res> {
+  __$$getReelImplCopyWithImpl(
+      _$getReelImpl _value, $Res Function(_$getReelImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ReelEvent
@@ -97,18 +109,18 @@ class __$$getPostImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$getPostImpl implements _getPost {
-  const _$getPostImpl();
+class _$getReelImpl implements _getReel {
+  const _$getReelImpl();
 
   @override
   String toString() {
-    return 'ReelEvent.getPost()';
+    return 'ReelEvent.getReel()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$getPostImpl);
+        (other.runtimeType == runtimeType && other is _$getReelImpl);
   }
 
   @override
@@ -117,30 +129,36 @@ class _$getPostImpl implements _getPost {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPost,
-    required TResult Function() newPost,
+    required TResult Function() getReel,
+    required TResult Function() newReel,
+    required TResult Function(String title) changeTitle,
+    required TResult Function(String video) changeVideo,
   }) {
-    return getPost();
+    return getReel();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPost,
-    TResult? Function()? newPost,
+    TResult? Function()? getReel,
+    TResult? Function()? newReel,
+    TResult? Function(String title)? changeTitle,
+    TResult? Function(String video)? changeVideo,
   }) {
-    return getPost?.call();
+    return getReel?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPost,
-    TResult Function()? newPost,
+    TResult Function()? getReel,
+    TResult Function()? newReel,
+    TResult Function(String title)? changeTitle,
+    TResult Function(String video)? changeVideo,
     required TResult orElse(),
   }) {
-    if (getPost != null) {
-      return getPost();
+    if (getReel != null) {
+      return getReel();
     }
     return orElse();
   }
@@ -148,52 +166,58 @@ class _$getPostImpl implements _getPost {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_getPost value) getPost,
-    required TResult Function(_newPost value) newPost,
+    required TResult Function(_getReel value) getReel,
+    required TResult Function(_newReel value) newReel,
+    required TResult Function(_ChangeTitle value) changeTitle,
+    required TResult Function(_ChangeVideo value) changeVideo,
   }) {
-    return getPost(this);
+    return getReel(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_getPost value)? getPost,
-    TResult? Function(_newPost value)? newPost,
+    TResult? Function(_getReel value)? getReel,
+    TResult? Function(_newReel value)? newReel,
+    TResult? Function(_ChangeTitle value)? changeTitle,
+    TResult? Function(_ChangeVideo value)? changeVideo,
   }) {
-    return getPost?.call(this);
+    return getReel?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_getPost value)? getPost,
-    TResult Function(_newPost value)? newPost,
+    TResult Function(_getReel value)? getReel,
+    TResult Function(_newReel value)? newReel,
+    TResult Function(_ChangeTitle value)? changeTitle,
+    TResult Function(_ChangeVideo value)? changeVideo,
     required TResult orElse(),
   }) {
-    if (getPost != null) {
-      return getPost(this);
+    if (getReel != null) {
+      return getReel(this);
     }
     return orElse();
   }
 }
 
-abstract class _getPost implements ReelEvent {
-  const factory _getPost() = _$getPostImpl;
+abstract class _getReel implements ReelEvent {
+  const factory _getReel() = _$getReelImpl;
 }
 
 /// @nodoc
-abstract class _$$newPostImplCopyWith<$Res> {
-  factory _$$newPostImplCopyWith(
-          _$newPostImpl value, $Res Function(_$newPostImpl) then) =
-      __$$newPostImplCopyWithImpl<$Res>;
+abstract class _$$newReelImplCopyWith<$Res> {
+  factory _$$newReelImplCopyWith(
+          _$newReelImpl value, $Res Function(_$newReelImpl) then) =
+      __$$newReelImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$newPostImplCopyWithImpl<$Res>
-    extends _$ReelEventCopyWithImpl<$Res, _$newPostImpl>
-    implements _$$newPostImplCopyWith<$Res> {
-  __$$newPostImplCopyWithImpl(
-      _$newPostImpl _value, $Res Function(_$newPostImpl) _then)
+class __$$newReelImplCopyWithImpl<$Res>
+    extends _$ReelEventCopyWithImpl<$Res, _$newReelImpl>
+    implements _$$newReelImplCopyWith<$Res> {
+  __$$newReelImplCopyWithImpl(
+      _$newReelImpl _value, $Res Function(_$newReelImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ReelEvent
@@ -202,18 +226,18 @@ class __$$newPostImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$newPostImpl implements _newPost {
-  const _$newPostImpl();
+class _$newReelImpl implements _newReel {
+  const _$newReelImpl();
 
   @override
   String toString() {
-    return 'ReelEvent.newPost()';
+    return 'ReelEvent.newReel()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$newPostImpl);
+        (other.runtimeType == runtimeType && other is _$newReelImpl);
   }
 
   @override
@@ -222,30 +246,36 @@ class _$newPostImpl implements _newPost {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPost,
-    required TResult Function() newPost,
+    required TResult Function() getReel,
+    required TResult Function() newReel,
+    required TResult Function(String title) changeTitle,
+    required TResult Function(String video) changeVideo,
   }) {
-    return newPost();
+    return newReel();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPost,
-    TResult? Function()? newPost,
+    TResult? Function()? getReel,
+    TResult? Function()? newReel,
+    TResult? Function(String title)? changeTitle,
+    TResult? Function(String video)? changeVideo,
   }) {
-    return newPost?.call();
+    return newReel?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPost,
-    TResult Function()? newPost,
+    TResult Function()? getReel,
+    TResult Function()? newReel,
+    TResult Function(String title)? changeTitle,
+    TResult Function(String video)? changeVideo,
     required TResult orElse(),
   }) {
-    if (newPost != null) {
-      return newPost();
+    if (newReel != null) {
+      return newReel();
     }
     return orElse();
   }
@@ -253,37 +283,347 @@ class _$newPostImpl implements _newPost {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_getPost value) getPost,
-    required TResult Function(_newPost value) newPost,
+    required TResult Function(_getReel value) getReel,
+    required TResult Function(_newReel value) newReel,
+    required TResult Function(_ChangeTitle value) changeTitle,
+    required TResult Function(_ChangeVideo value) changeVideo,
   }) {
-    return newPost(this);
+    return newReel(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_getPost value)? getPost,
-    TResult? Function(_newPost value)? newPost,
+    TResult? Function(_getReel value)? getReel,
+    TResult? Function(_newReel value)? newReel,
+    TResult? Function(_ChangeTitle value)? changeTitle,
+    TResult? Function(_ChangeVideo value)? changeVideo,
   }) {
-    return newPost?.call(this);
+    return newReel?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_getPost value)? getPost,
-    TResult Function(_newPost value)? newPost,
+    TResult Function(_getReel value)? getReel,
+    TResult Function(_newReel value)? newReel,
+    TResult Function(_ChangeTitle value)? changeTitle,
+    TResult Function(_ChangeVideo value)? changeVideo,
     required TResult orElse(),
   }) {
-    if (newPost != null) {
-      return newPost(this);
+    if (newReel != null) {
+      return newReel(this);
     }
     return orElse();
   }
 }
 
-abstract class _newPost implements ReelEvent {
-  const factory _newPost() = _$newPostImpl;
+abstract class _newReel implements ReelEvent {
+  const factory _newReel() = _$newReelImpl;
+}
+
+/// @nodoc
+abstract class _$$ChangeTitleImplCopyWith<$Res> {
+  factory _$$ChangeTitleImplCopyWith(
+          _$ChangeTitleImpl value, $Res Function(_$ChangeTitleImpl) then) =
+      __$$ChangeTitleImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String title});
+}
+
+/// @nodoc
+class __$$ChangeTitleImplCopyWithImpl<$Res>
+    extends _$ReelEventCopyWithImpl<$Res, _$ChangeTitleImpl>
+    implements _$$ChangeTitleImplCopyWith<$Res> {
+  __$$ChangeTitleImplCopyWithImpl(
+      _$ChangeTitleImpl _value, $Res Function(_$ChangeTitleImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ReelEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+  }) {
+    return _then(_$ChangeTitleImpl(
+      null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeTitleImpl implements _ChangeTitle {
+  const _$ChangeTitleImpl(this.title);
+
+  @override
+  final String title;
+
+  @override
+  String toString() {
+    return 'ReelEvent.changeTitle(title: $title)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeTitleImpl &&
+            (identical(other.title, title) || other.title == title));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, title);
+
+  /// Create a copy of ReelEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeTitleImplCopyWith<_$ChangeTitleImpl> get copyWith =>
+      __$$ChangeTitleImplCopyWithImpl<_$ChangeTitleImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getReel,
+    required TResult Function() newReel,
+    required TResult Function(String title) changeTitle,
+    required TResult Function(String video) changeVideo,
+  }) {
+    return changeTitle(title);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getReel,
+    TResult? Function()? newReel,
+    TResult? Function(String title)? changeTitle,
+    TResult? Function(String video)? changeVideo,
+  }) {
+    return changeTitle?.call(title);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getReel,
+    TResult Function()? newReel,
+    TResult Function(String title)? changeTitle,
+    TResult Function(String video)? changeVideo,
+    required TResult orElse(),
+  }) {
+    if (changeTitle != null) {
+      return changeTitle(title);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_getReel value) getReel,
+    required TResult Function(_newReel value) newReel,
+    required TResult Function(_ChangeTitle value) changeTitle,
+    required TResult Function(_ChangeVideo value) changeVideo,
+  }) {
+    return changeTitle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_getReel value)? getReel,
+    TResult? Function(_newReel value)? newReel,
+    TResult? Function(_ChangeTitle value)? changeTitle,
+    TResult? Function(_ChangeVideo value)? changeVideo,
+  }) {
+    return changeTitle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_getReel value)? getReel,
+    TResult Function(_newReel value)? newReel,
+    TResult Function(_ChangeTitle value)? changeTitle,
+    TResult Function(_ChangeVideo value)? changeVideo,
+    required TResult orElse(),
+  }) {
+    if (changeTitle != null) {
+      return changeTitle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ChangeTitle implements ReelEvent {
+  const factory _ChangeTitle(final String title) = _$ChangeTitleImpl;
+
+  String get title;
+
+  /// Create a copy of ReelEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ChangeTitleImplCopyWith<_$ChangeTitleImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChangeVideoImplCopyWith<$Res> {
+  factory _$$ChangeVideoImplCopyWith(
+          _$ChangeVideoImpl value, $Res Function(_$ChangeVideoImpl) then) =
+      __$$ChangeVideoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String video});
+}
+
+/// @nodoc
+class __$$ChangeVideoImplCopyWithImpl<$Res>
+    extends _$ReelEventCopyWithImpl<$Res, _$ChangeVideoImpl>
+    implements _$$ChangeVideoImplCopyWith<$Res> {
+  __$$ChangeVideoImplCopyWithImpl(
+      _$ChangeVideoImpl _value, $Res Function(_$ChangeVideoImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ReelEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? video = null,
+  }) {
+    return _then(_$ChangeVideoImpl(
+      null == video
+          ? _value.video
+          : video // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeVideoImpl implements _ChangeVideo {
+  const _$ChangeVideoImpl(this.video);
+
+  @override
+  final String video;
+
+  @override
+  String toString() {
+    return 'ReelEvent.changeVideo(video: $video)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeVideoImpl &&
+            (identical(other.video, video) || other.video == video));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, video);
+
+  /// Create a copy of ReelEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeVideoImplCopyWith<_$ChangeVideoImpl> get copyWith =>
+      __$$ChangeVideoImplCopyWithImpl<_$ChangeVideoImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getReel,
+    required TResult Function() newReel,
+    required TResult Function(String title) changeTitle,
+    required TResult Function(String video) changeVideo,
+  }) {
+    return changeVideo(video);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getReel,
+    TResult? Function()? newReel,
+    TResult? Function(String title)? changeTitle,
+    TResult? Function(String video)? changeVideo,
+  }) {
+    return changeVideo?.call(video);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getReel,
+    TResult Function()? newReel,
+    TResult Function(String title)? changeTitle,
+    TResult Function(String video)? changeVideo,
+    required TResult orElse(),
+  }) {
+    if (changeVideo != null) {
+      return changeVideo(video);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_getReel value) getReel,
+    required TResult Function(_newReel value) newReel,
+    required TResult Function(_ChangeTitle value) changeTitle,
+    required TResult Function(_ChangeVideo value) changeVideo,
+  }) {
+    return changeVideo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_getReel value)? getReel,
+    TResult? Function(_newReel value)? newReel,
+    TResult? Function(_ChangeTitle value)? changeTitle,
+    TResult? Function(_ChangeVideo value)? changeVideo,
+  }) {
+    return changeVideo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_getReel value)? getReel,
+    TResult Function(_newReel value)? newReel,
+    TResult Function(_ChangeTitle value)? changeTitle,
+    TResult Function(_ChangeVideo value)? changeVideo,
+    required TResult orElse(),
+  }) {
+    if (changeVideo != null) {
+      return changeVideo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ChangeVideo implements ReelEvent {
+  const factory _ChangeVideo(final String video) = _$ChangeVideoImpl;
+
+  String get video;
+
+  /// Create a copy of ReelEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ChangeVideoImplCopyWith<_$ChangeVideoImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -291,12 +631,12 @@ mixin _$ReelState {
   UIStatus get status => throw _privateConstructorUsedError;
   ReelNotification? get notification => throw _privateConstructorUsedError;
   bool get loading => throw _privateConstructorUsedError;
-  String get caption => throw _privateConstructorUsedError;
-  String get image => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   String get video => throw _privateConstructorUsedError;
   bool get isSuccess => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
-  Post? get post => throw _privateConstructorUsedError;
+  List<Reel> get reels => throw _privateConstructorUsedError;
+  Reel? get reel => throw _privateConstructorUsedError;
 
   /// Create a copy of ReelState
   /// with the given fields replaced by the non-null parameter values.
@@ -314,12 +654,12 @@ abstract class $ReelStateCopyWith<$Res> {
       {UIStatus status,
       ReelNotification? notification,
       bool loading,
-      String caption,
-      String image,
+      String title,
       String video,
       bool isSuccess,
       String errorMessage,
-      Post? post});
+      List<Reel> reels,
+      Reel? reel});
 
   $UIStatusCopyWith<$Res> get status;
   $ReelNotificationCopyWith<$Res>? get notification;
@@ -343,12 +683,12 @@ class _$ReelStateCopyWithImpl<$Res, $Val extends ReelState>
     Object? status = null,
     Object? notification = freezed,
     Object? loading = null,
-    Object? caption = null,
-    Object? image = null,
+    Object? title = null,
     Object? video = null,
     Object? isSuccess = null,
     Object? errorMessage = null,
-    Object? post = freezed,
+    Object? reels = null,
+    Object? reel = freezed,
   }) {
     return _then(_value.copyWith(
       status: null == status
@@ -363,13 +703,9 @@ class _$ReelStateCopyWithImpl<$Res, $Val extends ReelState>
           ? _value.loading
           : loading // ignore: cast_nullable_to_non_nullable
               as bool,
-      caption: null == caption
-          ? _value.caption
-          : caption // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
               as String,
       video: null == video
           ? _value.video
@@ -383,10 +719,14 @@ class _$ReelStateCopyWithImpl<$Res, $Val extends ReelState>
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      post: freezed == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as Post?,
+      reels: null == reels
+          ? _value.reels
+          : reels // ignore: cast_nullable_to_non_nullable
+              as List<Reel>,
+      reel: freezed == reel
+          ? _value.reel
+          : reel // ignore: cast_nullable_to_non_nullable
+              as Reel?,
     ) as $Val);
   }
 
@@ -427,12 +767,12 @@ abstract class _$$ReelStateImplCopyWith<$Res>
       {UIStatus status,
       ReelNotification? notification,
       bool loading,
-      String caption,
-      String image,
+      String title,
       String video,
       bool isSuccess,
       String errorMessage,
-      Post? post});
+      List<Reel> reels,
+      Reel? reel});
 
   @override
   $UIStatusCopyWith<$Res> get status;
@@ -456,12 +796,12 @@ class __$$ReelStateImplCopyWithImpl<$Res>
     Object? status = null,
     Object? notification = freezed,
     Object? loading = null,
-    Object? caption = null,
-    Object? image = null,
+    Object? title = null,
     Object? video = null,
     Object? isSuccess = null,
     Object? errorMessage = null,
-    Object? post = freezed,
+    Object? reels = null,
+    Object? reel = freezed,
   }) {
     return _then(_$ReelStateImpl(
       status: null == status
@@ -476,13 +816,9 @@ class __$$ReelStateImplCopyWithImpl<$Res>
           ? _value.loading
           : loading // ignore: cast_nullable_to_non_nullable
               as bool,
-      caption: null == caption
-          ? _value.caption
-          : caption // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
               as String,
       video: null == video
           ? _value.video
@@ -496,10 +832,14 @@ class __$$ReelStateImplCopyWithImpl<$Res>
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      post: freezed == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as Post?,
+      reels: null == reels
+          ? _value._reels
+          : reels // ignore: cast_nullable_to_non_nullable
+              as List<Reel>,
+      reel: freezed == reel
+          ? _value.reel
+          : reel // ignore: cast_nullable_to_non_nullable
+              as Reel?,
     ));
   }
 }
@@ -511,12 +851,13 @@ class _$ReelStateImpl implements _ReelState {
       {this.status = const UIInitial(),
       this.notification,
       this.loading = false,
-      this.caption = '',
-      this.image = '',
+      this.title = '',
       this.video = '',
       this.isSuccess = false,
       this.errorMessage = '',
-      this.post});
+      final List<Reel> reels = const [],
+      this.reel})
+      : _reels = reels;
 
   @override
   @JsonKey()
@@ -528,10 +869,7 @@ class _$ReelStateImpl implements _ReelState {
   final bool loading;
   @override
   @JsonKey()
-  final String caption;
-  @override
-  @JsonKey()
-  final String image;
+  final String title;
   @override
   @JsonKey()
   final String video;
@@ -541,12 +879,21 @@ class _$ReelStateImpl implements _ReelState {
   @override
   @JsonKey()
   final String errorMessage;
+  final List<Reel> _reels;
   @override
-  final Post? post;
+  @JsonKey()
+  List<Reel> get reels {
+    if (_reels is EqualUnmodifiableListView) return _reels;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_reels);
+  }
+
+  @override
+  final Reel? reel;
 
   @override
   String toString() {
-    return 'ReelState(status: $status, notification: $notification, loading: $loading, caption: $caption, image: $image, video: $video, isSuccess: $isSuccess, errorMessage: $errorMessage, post: $post)';
+    return 'ReelState(status: $status, notification: $notification, loading: $loading, title: $title, video: $video, isSuccess: $isSuccess, errorMessage: $errorMessage, reels: $reels, reel: $reel)';
   }
 
   @override
@@ -558,19 +905,28 @@ class _$ReelStateImpl implements _ReelState {
             (identical(other.notification, notification) ||
                 other.notification == notification) &&
             (identical(other.loading, loading) || other.loading == loading) &&
-            (identical(other.caption, caption) || other.caption == caption) &&
-            (identical(other.image, image) || other.image == image) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.video, video) || other.video == video) &&
             (identical(other.isSuccess, isSuccess) ||
                 other.isSuccess == isSuccess) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage) &&
-            (identical(other.post, post) || other.post == post));
+            const DeepCollectionEquality().equals(other._reels, _reels) &&
+            (identical(other.reel, reel) || other.reel == reel));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status, notification, loading,
-      caption, image, video, isSuccess, errorMessage, post);
+  int get hashCode => Object.hash(
+      runtimeType,
+      status,
+      notification,
+      loading,
+      title,
+      video,
+      isSuccess,
+      errorMessage,
+      const DeepCollectionEquality().hash(_reels),
+      reel);
 
   /// Create a copy of ReelState
   /// with the given fields replaced by the non-null parameter values.
@@ -586,12 +942,12 @@ abstract class _ReelState implements ReelState {
       {final UIStatus status,
       final ReelNotification? notification,
       final bool loading,
-      final String caption,
-      final String image,
+      final String title,
       final String video,
       final bool isSuccess,
       final String errorMessage,
-      final Post? post}) = _$ReelStateImpl;
+      final List<Reel> reels,
+      final Reel? reel}) = _$ReelStateImpl;
 
   @override
   UIStatus get status;
@@ -600,9 +956,7 @@ abstract class _ReelState implements ReelState {
   @override
   bool get loading;
   @override
-  String get caption;
-  @override
-  String get image;
+  String get title;
   @override
   String get video;
   @override
@@ -610,7 +964,9 @@ abstract class _ReelState implements ReelState {
   @override
   String get errorMessage;
   @override
-  Post? get post;
+  List<Reel> get reels;
+  @override
+  Reel? get reel;
 
   /// Create a copy of ReelState
   /// with the given fields replaced by the non-null parameter values.

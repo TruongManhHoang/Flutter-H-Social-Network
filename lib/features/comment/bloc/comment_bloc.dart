@@ -111,7 +111,9 @@ class CommentBloc extends Bloc<CommentEvent, CommentState> {
               email: '',
               password: '',
               gender: '',
-              savedPosts: []),
+              savedPosts: [],
+              followers: [],
+              followings: []),
           liked: []);
       String token = _localStorageService.getString(key: AppKeys.token) ?? '';
       dynamic payload = comment.toJson();

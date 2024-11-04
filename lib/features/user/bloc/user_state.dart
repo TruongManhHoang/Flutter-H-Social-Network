@@ -7,6 +7,7 @@ class UserState with _$UserState {
     UserNotification? notification,
     @Default(false) bool loading,
     @Default(0) int id,
+    @Default(0) int userId,
     @Default('') String firstName,
     @Default('') String lastName,
     @Default('') String email,

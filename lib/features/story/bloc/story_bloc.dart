@@ -103,7 +103,9 @@ class StoryBloc extends Bloc<StoryEvent, StoryState> {
             email: '',
             password: '',
             gender: '',
-            savedPosts: []),
+            savedPosts: [],
+            followers: [],
+            followings: []),
       );
 
       String token = _localStorageService.getString(key: AppKeys.token) ?? '';

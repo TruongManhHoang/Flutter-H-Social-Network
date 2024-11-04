@@ -168,7 +168,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
               email: '',
               password: '',
               gender: '',
-              savedPosts: []),
+              savedPosts: [],
+              followers: [],
+              followings: []),
           comments: []);
 
       String token = _localStorageService.getString(key: AppKeys.token) ?? '';

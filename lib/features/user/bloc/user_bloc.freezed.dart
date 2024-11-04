@@ -23,6 +23,7 @@ mixin _$UserEvent {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -30,6 +31,7 @@ mixin _$UserEvent {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,6 +41,7 @@ mixin _$UserEvent {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -46,6 +49,7 @@ mixin _$UserEvent {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$UserEvent {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -62,6 +67,7 @@ mixin _$UserEvent {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,6 +78,7 @@ mixin _$UserEvent {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -79,6 +86,7 @@ mixin _$UserEvent {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -88,6 +96,7 @@ mixin _$UserEvent {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -95,6 +104,7 @@ mixin _$UserEvent {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -104,6 +114,7 @@ mixin _$UserEvent {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -111,6 +122,7 @@ mixin _$UserEvent {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -182,6 +194,7 @@ class _$getUserImpl implements _getUser {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -189,6 +202,7 @@ class _$getUserImpl implements _getUser {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return getUser();
   }
@@ -201,6 +215,7 @@ class _$getUserImpl implements _getUser {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -208,6 +223,7 @@ class _$getUserImpl implements _getUser {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return getUser?.call();
   }
@@ -220,6 +236,7 @@ class _$getUserImpl implements _getUser {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -227,6 +244,7 @@ class _$getUserImpl implements _getUser {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (getUser != null) {
@@ -243,6 +261,7 @@ class _$getUserImpl implements _getUser {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -250,6 +269,7 @@ class _$getUserImpl implements _getUser {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return getUser(this);
   }
@@ -262,6 +282,7 @@ class _$getUserImpl implements _getUser {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -269,6 +290,7 @@ class _$getUserImpl implements _getUser {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return getUser?.call(this);
   }
@@ -281,6 +303,7 @@ class _$getUserImpl implements _getUser {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -288,6 +311,7 @@ class _$getUserImpl implements _getUser {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (getUser != null) {
@@ -347,6 +371,7 @@ class _$newUserImpl implements _newUser {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -354,6 +379,7 @@ class _$newUserImpl implements _newUser {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return newUser();
   }
@@ -366,6 +392,7 @@ class _$newUserImpl implements _newUser {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -373,6 +400,7 @@ class _$newUserImpl implements _newUser {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return newUser?.call();
   }
@@ -385,6 +413,7 @@ class _$newUserImpl implements _newUser {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -392,6 +421,7 @@ class _$newUserImpl implements _newUser {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (newUser != null) {
@@ -408,6 +438,7 @@ class _$newUserImpl implements _newUser {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -415,6 +446,7 @@ class _$newUserImpl implements _newUser {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return newUser(this);
   }
@@ -427,6 +459,7 @@ class _$newUserImpl implements _newUser {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -434,6 +467,7 @@ class _$newUserImpl implements _newUser {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return newUser?.call(this);
   }
@@ -446,6 +480,7 @@ class _$newUserImpl implements _newUser {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -453,6 +488,7 @@ class _$newUserImpl implements _newUser {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (newUser != null) {
@@ -512,6 +548,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -519,6 +556,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return getProfileUser();
   }
@@ -531,6 +569,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -538,6 +577,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return getProfileUser?.call();
   }
@@ -550,6 +590,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -557,6 +598,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (getProfileUser != null) {
@@ -573,6 +615,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -580,6 +623,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return getProfileUser(this);
   }
@@ -592,6 +636,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -599,6 +644,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return getProfileUser?.call(this);
   }
@@ -611,6 +657,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -618,6 +665,7 @@ class _$getProfileUserImpl implements _getProfileUser {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (getProfileUser != null) {
@@ -677,6 +725,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -684,6 +733,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return updateProfileUser();
   }
@@ -696,6 +746,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -703,6 +754,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return updateProfileUser?.call();
   }
@@ -715,6 +767,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -722,6 +775,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (updateProfileUser != null) {
@@ -738,6 +792,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -745,6 +800,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return updateProfileUser(this);
   }
@@ -757,6 +813,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -764,6 +821,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return updateProfileUser?.call(this);
   }
@@ -776,6 +834,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -783,6 +842,7 @@ class _$updateProfileUserImpl implements _updateProfileUser {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (updateProfileUser != null) {
@@ -869,6 +929,7 @@ class _$searchUserImpl implements _searchUser {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -876,6 +937,7 @@ class _$searchUserImpl implements _searchUser {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return searchUser(name);
   }
@@ -888,6 +950,7 @@ class _$searchUserImpl implements _searchUser {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -895,6 +958,7 @@ class _$searchUserImpl implements _searchUser {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return searchUser?.call(name);
   }
@@ -907,6 +971,7 @@ class _$searchUserImpl implements _searchUser {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -914,6 +979,7 @@ class _$searchUserImpl implements _searchUser {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (searchUser != null) {
@@ -930,6 +996,7 @@ class _$searchUserImpl implements _searchUser {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -937,6 +1004,7 @@ class _$searchUserImpl implements _searchUser {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return searchUser(this);
   }
@@ -949,6 +1017,7 @@ class _$searchUserImpl implements _searchUser {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -956,6 +1025,7 @@ class _$searchUserImpl implements _searchUser {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return searchUser?.call(this);
   }
@@ -968,6 +1038,7 @@ class _$searchUserImpl implements _searchUser {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -975,6 +1046,7 @@ class _$searchUserImpl implements _searchUser {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (searchUser != null) {
@@ -994,6 +1066,183 @@ abstract class _searchUser implements UserEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$searchUserImplCopyWith<_$searchUserImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$followUserImplCopyWith<$Res> {
+  factory _$$followUserImplCopyWith(
+          _$followUserImpl value, $Res Function(_$followUserImpl) then) =
+      __$$followUserImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$followUserImplCopyWithImpl<$Res>
+    extends _$UserEventCopyWithImpl<$Res, _$followUserImpl>
+    implements _$$followUserImplCopyWith<$Res> {
+  __$$followUserImplCopyWithImpl(
+      _$followUserImpl _value, $Res Function(_$followUserImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$followUserImpl implements _followUser {
+  const _$followUserImpl();
+
+  @override
+  String toString() {
+    return 'UserEvent.followUser()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$followUserImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getUser,
+    required TResult Function() newUser,
+    required TResult Function() getProfileUser,
+    required TResult Function() updateProfileUser,
+    required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
+    required TResult Function(String firstName) changeFirstName,
+    required TResult Function(int id) changeId,
+    required TResult Function(String lastName) changeLastName,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String gender) changeGender,
+    required TResult Function(String password) changePassword,
+    required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
+  }) {
+    return followUser();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getUser,
+    TResult? Function()? newUser,
+    TResult? Function()? getProfileUser,
+    TResult? Function()? updateProfileUser,
+    TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
+    TResult? Function(String firstName)? changeFirstName,
+    TResult? Function(int id)? changeId,
+    TResult? Function(String lastName)? changeLastName,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String gender)? changeGender,
+    TResult? Function(String password)? changePassword,
+    TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
+  }) {
+    return followUser?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getUser,
+    TResult Function()? newUser,
+    TResult Function()? getProfileUser,
+    TResult Function()? updateProfileUser,
+    TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
+    TResult Function(String firstName)? changeFirstName,
+    TResult Function(int id)? changeId,
+    TResult Function(String lastName)? changeLastName,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String gender)? changeGender,
+    TResult Function(String password)? changePassword,
+    TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
+    required TResult orElse(),
+  }) {
+    if (followUser != null) {
+      return followUser();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_getUser value) getUser,
+    required TResult Function(_newUser value) newUser,
+    required TResult Function(_getProfileUser value) getProfileUser,
+    required TResult Function(_updateProfileUser value) updateProfileUser,
+    required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
+    required TResult Function(_changeFirstName value) changeFirstName,
+    required TResult Function(_changeId value) changeId,
+    required TResult Function(_changeLastName value) changeLastName,
+    required TResult Function(_changeEmail value) changeEmail,
+    required TResult Function(_changGender value) changeGender,
+    required TResult Function(_changePassword value) changePassword,
+    required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
+  }) {
+    return followUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_getUser value)? getUser,
+    TResult? Function(_newUser value)? newUser,
+    TResult? Function(_getProfileUser value)? getProfileUser,
+    TResult? Function(_updateProfileUser value)? updateProfileUser,
+    TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
+    TResult? Function(_changeFirstName value)? changeFirstName,
+    TResult? Function(_changeId value)? changeId,
+    TResult? Function(_changeLastName value)? changeLastName,
+    TResult? Function(_changeEmail value)? changeEmail,
+    TResult? Function(_changGender value)? changeGender,
+    TResult? Function(_changePassword value)? changePassword,
+    TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
+  }) {
+    return followUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_getUser value)? getUser,
+    TResult Function(_newUser value)? newUser,
+    TResult Function(_getProfileUser value)? getProfileUser,
+    TResult Function(_updateProfileUser value)? updateProfileUser,
+    TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
+    TResult Function(_changeFirstName value)? changeFirstName,
+    TResult Function(_changeId value)? changeId,
+    TResult Function(_changeLastName value)? changeLastName,
+    TResult Function(_changeEmail value)? changeEmail,
+    TResult Function(_changGender value)? changeGender,
+    TResult Function(_changePassword value)? changePassword,
+    TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
+    required TResult orElse(),
+  }) {
+    if (followUser != null) {
+      return followUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _followUser implements UserEvent {
+  const factory _followUser() = _$followUserImpl;
 }
 
 /// @nodoc
@@ -1071,6 +1320,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -1078,6 +1328,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return changeFirstName(firstName);
   }
@@ -1090,6 +1341,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -1097,6 +1349,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return changeFirstName?.call(firstName);
   }
@@ -1109,6 +1362,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -1116,6 +1370,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeFirstName != null) {
@@ -1132,6 +1387,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -1139,6 +1395,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return changeFirstName(this);
   }
@@ -1151,6 +1408,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -1158,6 +1416,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return changeFirstName?.call(this);
   }
@@ -1170,6 +1429,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -1177,6 +1437,7 @@ class _$changeFirstNameImpl implements _changeFirstName {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeFirstName != null) {
@@ -1272,6 +1533,7 @@ class _$changeIdImpl implements _changeId {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -1279,6 +1541,7 @@ class _$changeIdImpl implements _changeId {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return changeId(id);
   }
@@ -1291,6 +1554,7 @@ class _$changeIdImpl implements _changeId {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -1298,6 +1562,7 @@ class _$changeIdImpl implements _changeId {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return changeId?.call(id);
   }
@@ -1310,6 +1575,7 @@ class _$changeIdImpl implements _changeId {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -1317,6 +1583,7 @@ class _$changeIdImpl implements _changeId {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeId != null) {
@@ -1333,6 +1600,7 @@ class _$changeIdImpl implements _changeId {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -1340,6 +1608,7 @@ class _$changeIdImpl implements _changeId {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return changeId(this);
   }
@@ -1352,6 +1621,7 @@ class _$changeIdImpl implements _changeId {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -1359,6 +1629,7 @@ class _$changeIdImpl implements _changeId {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return changeId?.call(this);
   }
@@ -1371,6 +1642,7 @@ class _$changeIdImpl implements _changeId {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -1378,6 +1650,7 @@ class _$changeIdImpl implements _changeId {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeId != null) {
@@ -1474,6 +1747,7 @@ class _$changeLastNameImpl implements _changeLastName {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -1481,6 +1755,7 @@ class _$changeLastNameImpl implements _changeLastName {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return changeLastName(lastName);
   }
@@ -1493,6 +1768,7 @@ class _$changeLastNameImpl implements _changeLastName {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -1500,6 +1776,7 @@ class _$changeLastNameImpl implements _changeLastName {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return changeLastName?.call(lastName);
   }
@@ -1512,6 +1789,7 @@ class _$changeLastNameImpl implements _changeLastName {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -1519,6 +1797,7 @@ class _$changeLastNameImpl implements _changeLastName {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeLastName != null) {
@@ -1535,6 +1814,7 @@ class _$changeLastNameImpl implements _changeLastName {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -1542,6 +1822,7 @@ class _$changeLastNameImpl implements _changeLastName {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return changeLastName(this);
   }
@@ -1554,6 +1835,7 @@ class _$changeLastNameImpl implements _changeLastName {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -1561,6 +1843,7 @@ class _$changeLastNameImpl implements _changeLastName {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return changeLastName?.call(this);
   }
@@ -1573,6 +1856,7 @@ class _$changeLastNameImpl implements _changeLastName {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -1580,6 +1864,7 @@ class _$changeLastNameImpl implements _changeLastName {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeLastName != null) {
@@ -1674,6 +1959,7 @@ class _$changeEmailImpl implements _changeEmail {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -1681,6 +1967,7 @@ class _$changeEmailImpl implements _changeEmail {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return changeEmail(email);
   }
@@ -1693,6 +1980,7 @@ class _$changeEmailImpl implements _changeEmail {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -1700,6 +1988,7 @@ class _$changeEmailImpl implements _changeEmail {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return changeEmail?.call(email);
   }
@@ -1712,6 +2001,7 @@ class _$changeEmailImpl implements _changeEmail {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -1719,6 +2009,7 @@ class _$changeEmailImpl implements _changeEmail {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeEmail != null) {
@@ -1735,6 +2026,7 @@ class _$changeEmailImpl implements _changeEmail {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -1742,6 +2034,7 @@ class _$changeEmailImpl implements _changeEmail {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return changeEmail(this);
   }
@@ -1754,6 +2047,7 @@ class _$changeEmailImpl implements _changeEmail {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -1761,6 +2055,7 @@ class _$changeEmailImpl implements _changeEmail {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return changeEmail?.call(this);
   }
@@ -1773,6 +2068,7 @@ class _$changeEmailImpl implements _changeEmail {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -1780,6 +2076,7 @@ class _$changeEmailImpl implements _changeEmail {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeEmail != null) {
@@ -1874,6 +2171,7 @@ class _$changGenderImpl implements _changGender {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -1881,6 +2179,7 @@ class _$changGenderImpl implements _changGender {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return changeGender(gender);
   }
@@ -1893,6 +2192,7 @@ class _$changGenderImpl implements _changGender {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -1900,6 +2200,7 @@ class _$changGenderImpl implements _changGender {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return changeGender?.call(gender);
   }
@@ -1912,6 +2213,7 @@ class _$changGenderImpl implements _changGender {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -1919,6 +2221,7 @@ class _$changGenderImpl implements _changGender {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeGender != null) {
@@ -1935,6 +2238,7 @@ class _$changGenderImpl implements _changGender {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -1942,6 +2246,7 @@ class _$changGenderImpl implements _changGender {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return changeGender(this);
   }
@@ -1954,6 +2259,7 @@ class _$changGenderImpl implements _changGender {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -1961,6 +2267,7 @@ class _$changGenderImpl implements _changGender {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return changeGender?.call(this);
   }
@@ -1973,6 +2280,7 @@ class _$changGenderImpl implements _changGender {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -1980,6 +2288,7 @@ class _$changGenderImpl implements _changGender {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeGender != null) {
@@ -2076,6 +2385,7 @@ class _$changePasswordImpl implements _changePassword {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -2083,6 +2393,7 @@ class _$changePasswordImpl implements _changePassword {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return changePassword(password);
   }
@@ -2095,6 +2406,7 @@ class _$changePasswordImpl implements _changePassword {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -2102,6 +2414,7 @@ class _$changePasswordImpl implements _changePassword {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return changePassword?.call(password);
   }
@@ -2114,6 +2427,7 @@ class _$changePasswordImpl implements _changePassword {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -2121,6 +2435,7 @@ class _$changePasswordImpl implements _changePassword {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (changePassword != null) {
@@ -2137,6 +2452,7 @@ class _$changePasswordImpl implements _changePassword {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -2144,6 +2460,7 @@ class _$changePasswordImpl implements _changePassword {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return changePassword(this);
   }
@@ -2156,6 +2473,7 @@ class _$changePasswordImpl implements _changePassword {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -2163,6 +2481,7 @@ class _$changePasswordImpl implements _changePassword {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return changePassword?.call(this);
   }
@@ -2175,6 +2494,7 @@ class _$changePasswordImpl implements _changePassword {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -2182,6 +2502,7 @@ class _$changePasswordImpl implements _changePassword {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (changePassword != null) {
@@ -2278,6 +2599,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     required TResult Function() getProfileUser,
     required TResult Function() updateProfileUser,
     required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
     required TResult Function(String firstName) changeFirstName,
     required TResult Function(int id) changeId,
     required TResult Function(String lastName) changeLastName,
@@ -2285,6 +2607,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     required TResult Function(String gender) changeGender,
     required TResult Function(String password) changePassword,
     required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
   }) {
     return changeClientUser(clientUser);
   }
@@ -2297,6 +2620,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     TResult? Function()? getProfileUser,
     TResult? Function()? updateProfileUser,
     TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
     TResult? Function(String firstName)? changeFirstName,
     TResult? Function(int id)? changeId,
     TResult? Function(String lastName)? changeLastName,
@@ -2304,6 +2628,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     TResult? Function(String gender)? changeGender,
     TResult? Function(String password)? changePassword,
     TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
   }) {
     return changeClientUser?.call(clientUser);
   }
@@ -2316,6 +2641,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     TResult Function()? getProfileUser,
     TResult Function()? updateProfileUser,
     TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
     TResult Function(String firstName)? changeFirstName,
     TResult Function(int id)? changeId,
     TResult Function(String lastName)? changeLastName,
@@ -2323,6 +2649,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     TResult Function(String gender)? changeGender,
     TResult Function(String password)? changePassword,
     TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeClientUser != null) {
@@ -2339,6 +2666,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     required TResult Function(_getProfileUser value) getProfileUser,
     required TResult Function(_updateProfileUser value) updateProfileUser,
     required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
     required TResult Function(_changeFirstName value) changeFirstName,
     required TResult Function(_changeId value) changeId,
     required TResult Function(_changeLastName value) changeLastName,
@@ -2346,6 +2674,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     required TResult Function(_changGender value) changeGender,
     required TResult Function(_changePassword value) changePassword,
     required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
   }) {
     return changeClientUser(this);
   }
@@ -2358,6 +2687,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     TResult? Function(_getProfileUser value)? getProfileUser,
     TResult? Function(_updateProfileUser value)? updateProfileUser,
     TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
     TResult? Function(_changeFirstName value)? changeFirstName,
     TResult? Function(_changeId value)? changeId,
     TResult? Function(_changeLastName value)? changeLastName,
@@ -2365,6 +2695,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     TResult? Function(_changGender value)? changeGender,
     TResult? Function(_changePassword value)? changePassword,
     TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
   }) {
     return changeClientUser?.call(this);
   }
@@ -2377,6 +2708,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     TResult Function(_getProfileUser value)? getProfileUser,
     TResult Function(_updateProfileUser value)? updateProfileUser,
     TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
     TResult Function(_changeFirstName value)? changeFirstName,
     TResult Function(_changeId value)? changeId,
     TResult Function(_changeLastName value)? changeLastName,
@@ -2384,6 +2716,7 @@ class _$changeClientUserImpl implements _changeClientUser {
     TResult Function(_changGender value)? changeGender,
     TResult Function(_changePassword value)? changePassword,
     TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
     required TResult orElse(),
   }) {
     if (changeClientUser != null) {
@@ -2407,11 +2740,224 @@ abstract class _changeClientUser implements UserEvent {
 }
 
 /// @nodoc
+abstract class _$$changeUserIdImplCopyWith<$Res> {
+  factory _$$changeUserIdImplCopyWith(
+          _$changeUserIdImpl value, $Res Function(_$changeUserIdImpl) then) =
+      __$$changeUserIdImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int userId});
+}
+
+/// @nodoc
+class __$$changeUserIdImplCopyWithImpl<$Res>
+    extends _$UserEventCopyWithImpl<$Res, _$changeUserIdImpl>
+    implements _$$changeUserIdImplCopyWith<$Res> {
+  __$$changeUserIdImplCopyWithImpl(
+      _$changeUserIdImpl _value, $Res Function(_$changeUserIdImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userId = null,
+  }) {
+    return _then(_$changeUserIdImpl(
+      null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$changeUserIdImpl implements _changeUserId {
+  const _$changeUserIdImpl(this.userId);
+
+  @override
+  final int userId;
+
+  @override
+  String toString() {
+    return 'UserEvent.changeUserId(userId: $userId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$changeUserIdImpl &&
+            (identical(other.userId, userId) || other.userId == userId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, userId);
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$changeUserIdImplCopyWith<_$changeUserIdImpl> get copyWith =>
+      __$$changeUserIdImplCopyWithImpl<_$changeUserIdImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getUser,
+    required TResult Function() newUser,
+    required TResult Function() getProfileUser,
+    required TResult Function() updateProfileUser,
+    required TResult Function(String name) searchUser,
+    required TResult Function() followUser,
+    required TResult Function(String firstName) changeFirstName,
+    required TResult Function(int id) changeId,
+    required TResult Function(String lastName) changeLastName,
+    required TResult Function(String email) changeEmail,
+    required TResult Function(String gender) changeGender,
+    required TResult Function(String password) changePassword,
+    required TResult Function(User clientUser) changeClientUser,
+    required TResult Function(int userId) changeUserId,
+  }) {
+    return changeUserId(userId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getUser,
+    TResult? Function()? newUser,
+    TResult? Function()? getProfileUser,
+    TResult? Function()? updateProfileUser,
+    TResult? Function(String name)? searchUser,
+    TResult? Function()? followUser,
+    TResult? Function(String firstName)? changeFirstName,
+    TResult? Function(int id)? changeId,
+    TResult? Function(String lastName)? changeLastName,
+    TResult? Function(String email)? changeEmail,
+    TResult? Function(String gender)? changeGender,
+    TResult? Function(String password)? changePassword,
+    TResult? Function(User clientUser)? changeClientUser,
+    TResult? Function(int userId)? changeUserId,
+  }) {
+    return changeUserId?.call(userId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getUser,
+    TResult Function()? newUser,
+    TResult Function()? getProfileUser,
+    TResult Function()? updateProfileUser,
+    TResult Function(String name)? searchUser,
+    TResult Function()? followUser,
+    TResult Function(String firstName)? changeFirstName,
+    TResult Function(int id)? changeId,
+    TResult Function(String lastName)? changeLastName,
+    TResult Function(String email)? changeEmail,
+    TResult Function(String gender)? changeGender,
+    TResult Function(String password)? changePassword,
+    TResult Function(User clientUser)? changeClientUser,
+    TResult Function(int userId)? changeUserId,
+    required TResult orElse(),
+  }) {
+    if (changeUserId != null) {
+      return changeUserId(userId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_getUser value) getUser,
+    required TResult Function(_newUser value) newUser,
+    required TResult Function(_getProfileUser value) getProfileUser,
+    required TResult Function(_updateProfileUser value) updateProfileUser,
+    required TResult Function(_searchUser value) searchUser,
+    required TResult Function(_followUser value) followUser,
+    required TResult Function(_changeFirstName value) changeFirstName,
+    required TResult Function(_changeId value) changeId,
+    required TResult Function(_changeLastName value) changeLastName,
+    required TResult Function(_changeEmail value) changeEmail,
+    required TResult Function(_changGender value) changeGender,
+    required TResult Function(_changePassword value) changePassword,
+    required TResult Function(_changeClientUser value) changeClientUser,
+    required TResult Function(_changeUserId value) changeUserId,
+  }) {
+    return changeUserId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_getUser value)? getUser,
+    TResult? Function(_newUser value)? newUser,
+    TResult? Function(_getProfileUser value)? getProfileUser,
+    TResult? Function(_updateProfileUser value)? updateProfileUser,
+    TResult? Function(_searchUser value)? searchUser,
+    TResult? Function(_followUser value)? followUser,
+    TResult? Function(_changeFirstName value)? changeFirstName,
+    TResult? Function(_changeId value)? changeId,
+    TResult? Function(_changeLastName value)? changeLastName,
+    TResult? Function(_changeEmail value)? changeEmail,
+    TResult? Function(_changGender value)? changeGender,
+    TResult? Function(_changePassword value)? changePassword,
+    TResult? Function(_changeClientUser value)? changeClientUser,
+    TResult? Function(_changeUserId value)? changeUserId,
+  }) {
+    return changeUserId?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_getUser value)? getUser,
+    TResult Function(_newUser value)? newUser,
+    TResult Function(_getProfileUser value)? getProfileUser,
+    TResult Function(_updateProfileUser value)? updateProfileUser,
+    TResult Function(_searchUser value)? searchUser,
+    TResult Function(_followUser value)? followUser,
+    TResult Function(_changeFirstName value)? changeFirstName,
+    TResult Function(_changeId value)? changeId,
+    TResult Function(_changeLastName value)? changeLastName,
+    TResult Function(_changeEmail value)? changeEmail,
+    TResult Function(_changGender value)? changeGender,
+    TResult Function(_changePassword value)? changePassword,
+    TResult Function(_changeClientUser value)? changeClientUser,
+    TResult Function(_changeUserId value)? changeUserId,
+    required TResult orElse(),
+  }) {
+    if (changeUserId != null) {
+      return changeUserId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _changeUserId implements UserEvent {
+  const factory _changeUserId(final int userId) = _$changeUserIdImpl;
+
+  int get userId;
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$changeUserIdImplCopyWith<_$changeUserIdImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$UserState {
   UIStatus get status => throw _privateConstructorUsedError;
   UserNotification? get notification => throw _privateConstructorUsedError;
   bool get loading => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
+  int get userId => throw _privateConstructorUsedError;
   String get firstName => throw _privateConstructorUsedError;
   String get lastName => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
@@ -2442,6 +2988,7 @@ abstract class $UserStateCopyWith<$Res> {
       UserNotification? notification,
       bool loading,
       int id,
+      int userId,
       String firstName,
       String lastName,
       String email,
@@ -2478,6 +3025,7 @@ class _$UserStateCopyWithImpl<$Res, $Val extends UserState>
     Object? notification = freezed,
     Object? loading = null,
     Object? id = null,
+    Object? userId = null,
     Object? firstName = null,
     Object? lastName = null,
     Object? email = null,
@@ -2507,6 +3055,10 @@ class _$UserStateCopyWithImpl<$Res, $Val extends UserState>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
               as int,
       firstName: null == firstName
           ? _value.firstName
@@ -2597,6 +3149,7 @@ abstract class _$$UserStateImplCopyWith<$Res>
       UserNotification? notification,
       bool loading,
       int id,
+      int userId,
       String firstName,
       String lastName,
       String email,
@@ -2633,6 +3186,7 @@ class __$$UserStateImplCopyWithImpl<$Res>
     Object? notification = freezed,
     Object? loading = null,
     Object? id = null,
+    Object? userId = null,
     Object? firstName = null,
     Object? lastName = null,
     Object? email = null,
@@ -2662,6 +3216,10 @@ class __$$UserStateImplCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
               as int,
       firstName: null == firstName
           ? _value.firstName
@@ -2723,6 +3281,7 @@ class _$UserStateImpl implements _UserState {
       this.notification,
       this.loading = false,
       this.id = 0,
+      this.userId = 0,
       this.firstName = '',
       this.lastName = '',
       this.email = '',
@@ -2749,6 +3308,9 @@ class _$UserStateImpl implements _UserState {
   @override
   @JsonKey()
   final int id;
+  @override
+  @JsonKey()
+  final int userId;
   @override
   @JsonKey()
   final String firstName;
@@ -2798,7 +3360,7 @@ class _$UserStateImpl implements _UserState {
 
   @override
   String toString() {
-    return 'UserState(status: $status, notification: $notification, loading: $loading, id: $id, firstName: $firstName, lastName: $lastName, email: $email, gender: $gender, password: $password, isSuccess: $isSuccess, errorMessage: $errorMessage, users: $users, searchUsers: $searchUsers, textSearch: $textSearch, user: $user, clientUser: $clientUser)';
+    return 'UserState(status: $status, notification: $notification, loading: $loading, id: $id, userId: $userId, firstName: $firstName, lastName: $lastName, email: $email, gender: $gender, password: $password, isSuccess: $isSuccess, errorMessage: $errorMessage, users: $users, searchUsers: $searchUsers, textSearch: $textSearch, user: $user, clientUser: $clientUser)';
   }
 
   @override
@@ -2811,6 +3373,7 @@ class _$UserStateImpl implements _UserState {
                 other.notification == notification) &&
             (identical(other.loading, loading) || other.loading == loading) &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
             (identical(other.lastName, lastName) ||
@@ -2840,6 +3403,7 @@ class _$UserStateImpl implements _UserState {
       notification,
       loading,
       id,
+      userId,
       firstName,
       lastName,
       email,
@@ -2868,6 +3432,7 @@ abstract class _UserState implements UserState {
       final UserNotification? notification,
       final bool loading,
       final int id,
+      final int userId,
       final String firstName,
       final String lastName,
       final String email,
@@ -2889,6 +3454,8 @@ abstract class _UserState implements UserState {
   bool get loading;
   @override
   int get id;
+  @override
+  int get userId;
   @override
   String get firstName;
   @override

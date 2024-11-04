@@ -34,7 +34,9 @@ class Post {
               email: '',
               password: '',
               gender: '',
-              savedPosts: []),
+              savedPosts: [],
+              followers: [],
+              followings: []),
       comments: (json['comments'] as List<dynamic>?)
               ?.map((item) => Comment.fromJson(item))
               .toList() ??

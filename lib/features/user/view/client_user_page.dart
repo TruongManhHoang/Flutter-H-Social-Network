@@ -128,102 +128,7 @@ class __BodyState extends State<_Body> {
   bool isLiked = false;
   bool showComment = false;
   bool isLikedComment = false;
-  void showFormEditUser() {
-    showDialog(
-        context: context,
-        builder: (BuildContext dialogContext) {
-          return BlocProvider.value(
-            value: context.read<UserBloc>(),
-            child: AlertDialog(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              content: StatefulBuilder(
-                  builder: (BuildContext context, StateSetter setState) {
-                return BlocBuilder<UserBloc, UserState>(
-                    builder: (context, state) {
-                  final user = state.clientUser!;
-                  return Container(
-                      padding: EdgeInsets.all(16.0),
-                      width: double.maxFinite,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            'Edit profile user',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 10),
-                          TextFormField(
-                            decoration: InputDecoration(
-                              labelText: 'FirstName',
-                              border: OutlineInputBorder(),
-                            ),
-                            initialValue: user.firstName,
-                            onChanged: (value) {
-                              context
-                                  .read<UserBloc>()
-                                  .add(UserEvent.changeFirstName(value));
-                            },
-                          ),
-                          SizedBox(height: 10),
-                          TextFormField(
-                            decoration: InputDecoration(
-                              labelText: 'LastName',
-                              border: OutlineInputBorder(),
-                            ),
-                            initialValue: user.lastName,
-                            onChanged: (value) {
-                              context
-                                  .read<UserBloc>()
-                                  .add(UserEvent.changeLastName(value));
-                            },
-                          ),
-                          SizedBox(height: 10),
-                          TextFormField(
-                            decoration: InputDecoration(
-                              labelText: 'Email',
-                              border: OutlineInputBorder(),
-                            ),
-                            initialValue: user.email,
-                            onChanged: (value) {
-                              context
-                                  .read<UserBloc>()
-                                  .add(UserEvent.changeEmail(value));
-                            },
-                          ),
-                          SizedBox(height: 10),
-                          TextFormField(
-                            decoration: InputDecoration(
-                              labelText: 'Gender',
-                              border: OutlineInputBorder(),
-                            ),
-                            initialValue: user.gender,
-                            onChanged: (value) {
-                              context
-                                  .read<UserBloc>()
-                                  .add(UserEvent.changeGender(value));
-                            },
-                          ),
-                          SizedBox(height: 10),
-                          ElevatedButton(
-                            onPressed: () {
-                              context
-                                  .read<UserBloc>()
-                                  .add(UserEvent.updateProfileUser());
-                              Navigator.pop(dialogContext); // Đóng dialog
-                            },
-                            child: Text('Save'),
-                          ),
-                        ],
-                      ));
-                });
-              }),
-            ),
-          );
-        });
-  }
+  bool isFollowing = false;
 
   void Comment(StateSetter updateState) {
     updateState(() {
@@ -390,164 +295,164 @@ class __BodyState extends State<_Body> {
     );
   }
 
-  // void showSavePost(Post post) {
-  //   showDialog(
-  //     context: context,
-  //     builder: (BuildContext dialogContext) {
-  //       return BlocProvider.value(
-  //         value: context.read<HomeBloc>(),
-  //         child: AlertDialog(
-  //           shape: RoundedRectangleBorder(
-  //             borderRadius: BorderRadius.circular(10),
-  //           ),
-  //           content: StatefulBuilder(
-  //             builder: (BuildContext context, StateSetter setState) {
-  //               return Column(mainAxisSize: MainAxisSize.min, children: [
-  //                 Align(
-  //                   alignment: Alignment.centerLeft,
-  //                   child: Padding(
-  //                       padding: const EdgeInsets.symmetric(horizontal: 5),
-  //                       child: Column(
-  //                         crossAxisAlignment: CrossAxisAlignment.start,
-  //                         children: [
-  //                           Row(
-  //                             children: [
-  //                               Icon(
-  //                                 Icons.account_circle,
-  //                                 color: Colors.grey,
-  //                                 size: 45,
-  //                               ),
-  //                               Column(
-  //                                 children: [
-  //                                   Text(
-  //                                     post.user.firstName,
-  //                                     style: TextStyle(color: Colors.black),
-  //                                   ),
-  //                                   const SizedBox(height: 5),
-  //                                   Text(post.caption),
-  //                                 ],
-  //                               )
-  //                             ],
-  //                           )
-  //                         ],
-  //                       )),
-  //                 ),
-  //                 SizedBox(
-  //                   height: 10,
-  //                 ),
-  //                 Image.network(
-  //                   post.image,
-  //                   fit: BoxFit.cover,
-  //                   width: 600,
-  //                   height: 500,
-  //                 ),
-  //                 const SizedBox(height: 8),
-  //                 Row(
-  //                   children: [
-  //                     IconButton(
-  //                         onPressed: () {
-  //                           setState(() {
-  //                             context
-  //                                 .read<HomeBloc>()
-  //                                 .add(HomeEvent.changeId(post.id));
-  //                             isLiked = !isLiked;
-  //                             context
-  //                                 .read<HomeBloc>()
-  //                                 .add(HomeEvent.likePost());
-  //                           });
-  //                         },
-  //                         icon: Icon(
-  //                           Icons.favorite,
-  //                           color: isLiked ? Colors.red : Colors.grey,
-  //                         )),
-  //                     SizedBox(
-  //                       width: 5,
-  //                     ),
-  //                     IconButton(
-  //                         onPressed: () {
-  //                           Comment(setState);
-  //                         },
-  //                         icon: Icon(
-  //                           Icons.comment,
-  //                           color: showComment ? Colors.blue : Colors.grey,
-  //                         )),
-  //                     Spacer(),
-  //                     IconButton(
-  //                         onPressed: () {
-  //                           context
-  //                               .read<HomeBloc>()
-  //                               .add(HomeEvent.changeId(post.id));
-  //                           context.read<HomeBloc>().add(HomeEvent.savePost());
-  //                         },
-  //                         icon: Icon(
-  //                           Icons.save_rounded,
-  //                           color: Colors.grey,
-  //                         )),
-  //                   ],
-  //                 ),
-  //                 if (showComment)
-  //                   Container(
-  //                     height: 70,
-  //                     child: SingleChildScrollView(
-  //                       child: Column(
-  //                         children: post.comments.map((comment) {
-  //                           return Column(
-  //                             children: [
-  //                               Padding(
-  //                                 padding: const EdgeInsets.only(
-  //                                     left: 20, top: 10, bottom: 10),
-  //                                 child: Row(
-  //                                   crossAxisAlignment:
-  //                                       CrossAxisAlignment.start,
-  //                                   children: [
-  //                                     Column(
-  //                                       crossAxisAlignment:
-  //                                           CrossAxisAlignment.start,
-  //                                       children: [
-  //                                         Text(
-  //                                           comment.user.firstName,
-  //                                           style: TextStyle(
-  //                                               fontWeight: FontWeight.bold),
-  //                                         ),
-  //                                         const SizedBox(height: 5),
-  //                                         Text(comment.content),
-  //                                       ],
-  //                                     ),
-  //                                     const Spacer(),
-  //                                     IconButton(
-  //                                       onPressed: () {
-  //                                         context.read<CommentBloc>().add(
-  //                                             CommentEvent.selectCommentId(
-  //                                                 comment.id));
-  //                                         context
-  //                                             .read<CommentBloc>()
-  //                                             .add(CommentEvent.likeComment());
-  //                                       },
-  //                                       icon: Icon(
-  //                                         Icons.favorite,
-  //                                         color: isLikedComment
-  //                                             ? Colors.red
-  //                                             : Colors.grey,
-  //                                       ),
-  //                                     ),
-  //                                   ],
-  //                                 ),
-  //                               ),
-  //                               const Divider(),
-  //                             ],
-  //                           );
-  //                         }).toList(),
-  //                       ),
-  //                     ),
-  //                   )
-  //               ]);
-  //             },
-  //           ),
-  //         ),
-  //       );
-  //     },
-  //   );
-  // }
+  void showSavePost(Post post) {
+    showDialog(
+      context: context,
+      builder: (BuildContext dialogContext) {
+        return BlocProvider.value(
+          value: context.read<HomeBloc>(),
+          child: AlertDialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            content: StatefulBuilder(
+              builder: (BuildContext context, StateSetter setState) {
+                return Column(mainAxisSize: MainAxisSize.min, children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 5),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.account_circle,
+                                  color: Colors.grey,
+                                  size: 45,
+                                ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      post.user.firstName,
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                    const SizedBox(height: 5),
+                                    Text(post.caption),
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        )),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Image.network(
+                    post.image,
+                    fit: BoxFit.cover,
+                    width: 600,
+                    height: 500,
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      IconButton(
+                          onPressed: () {
+                            setState(() {
+                              context
+                                  .read<HomeBloc>()
+                                  .add(HomeEvent.changeId(post.id));
+                              isLiked = !isLiked;
+                              context
+                                  .read<HomeBloc>()
+                                  .add(HomeEvent.likePost());
+                            });
+                          },
+                          icon: Icon(
+                            Icons.favorite,
+                            color: isLiked ? Colors.red : Colors.grey,
+                          )),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      IconButton(
+                          onPressed: () {
+                            Comment(setState);
+                          },
+                          icon: Icon(
+                            Icons.comment,
+                            color: showComment ? Colors.blue : Colors.grey,
+                          )),
+                      Spacer(),
+                      IconButton(
+                          onPressed: () {
+                            context
+                                .read<HomeBloc>()
+                                .add(HomeEvent.changeId(post.id));
+                            context.read<HomeBloc>().add(HomeEvent.savePost());
+                          },
+                          icon: Icon(
+                            Icons.save_rounded,
+                            color: Colors.grey,
+                          )),
+                    ],
+                  ),
+                  if (showComment)
+                    Container(
+                      height: 70,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: post.comments.map((comment) {
+                            return Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 20, top: 10, bottom: 10),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            comment.user.firstName,
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          const SizedBox(height: 5),
+                                          Text(comment.content),
+                                        ],
+                                      ),
+                                      const Spacer(),
+                                      IconButton(
+                                        onPressed: () {
+                                          context.read<CommentBloc>().add(
+                                              CommentEvent.selectCommentId(
+                                                  comment.id));
+                                          context
+                                              .read<CommentBloc>()
+                                              .add(CommentEvent.likeComment());
+                                        },
+                                        icon: Icon(
+                                          Icons.favorite,
+                                          color: isLikedComment
+                                              ? Colors.red
+                                              : Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const Divider(),
+                              ],
+                            );
+                          }).toList(),
+                        ),
+                      ),
+                    )
+                ]);
+              },
+            ),
+          ),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -572,32 +477,75 @@ class __BodyState extends State<_Body> {
                         Text('${user.firstName} ${user.lastName}'),
                       ],
                     ),
-                    Column(children: const [Text('0'), Text('posts')]),
-                    Column(children: const [Text('0'), Text('followers')]),
-                    Column(children: const [Text('0'), Text('following')]),
+                    Column(children: [Text('0'), Text('posts')]),
+                    Column(children: [
+                      Text('${user.followers.length}'),
+                      Text('followers')
+                    ]),
+                    Column(children: [
+                      Text('${user.followings.length}'),
+                      Text('following')
+                    ]),
                   ],
                 ),
+                SizedBox(
+                  height: 20,
+                ),
                 Padding(
-                  padding: const EdgeInsets.all(10),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Row(
                     children: [
                       Expanded(
                         child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  isFollowing ? Colors.grey : Colors.blue,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8))),
                           onPressed: () {
-                            showFormEditUser();
+                            context
+                                .read<UserBloc>()
+                                .add(UserEvent.changeUserId(user.id));
+                            context
+                                .read<UserBloc>()
+                                .add(UserEvent.followUser());
                           },
-                          child: const Center(child: Text('Edit profile')),
+                          child: Text(
+                            'Follow',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      SizedBox(
+                        width: 6,
+                      ),
                       Expanded(
                         child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8))),
                           onPressed: () {},
-                          child: const Center(child: Text('Share profile')),
+                          child: Text(
+                            'Message',
+                          ),
                         ),
                       ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Expanded(
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8))),
+                            onPressed: () {},
+                            child: Text('Subcribe')),
+                      )
                     ],
                   ),
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 DefaultTabController(
                     length: 3,
@@ -608,8 +556,8 @@ class __BodyState extends State<_Body> {
                         unselectedLabelColor: Colors.grey,
                         tabs: [
                           Tab(icon: Icon(Icons.grid_on), text: 'Posts'),
+                          Tab(icon: Icon(Icons.video_library), text: 'Tagged'),
                           Tab(icon: Icon(Icons.bookmark_border), text: 'Saved'),
-                          Tab(icon: Icon(Icons.tag), text: 'Tagged'),
                         ],
                       ),
                       SizedBox(
@@ -652,6 +600,7 @@ class __BodyState extends State<_Body> {
                                         child: Text('Error loading posts'));
                                   }
                                 })),
+                            Center(child: Text('Tagged Content')),
                             Container(
                               height: 600,
                               child: GridView.builder(
@@ -666,7 +615,7 @@ class __BodyState extends State<_Body> {
                                   final post = user.savedPosts[index];
                                   return GestureDetector(
                                     onTap: () {
-                                      // showSavePost(post);
+                                      showSavePost(post);
                                     },
                                     child: Image.network(
                                       post.image,
@@ -678,7 +627,6 @@ class __BodyState extends State<_Body> {
                                 },
                               ),
                             ),
-                            Center(child: Text('Tagged Content')),
                           ]))
                     ]))
               ],
