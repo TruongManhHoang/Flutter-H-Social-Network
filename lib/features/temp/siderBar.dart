@@ -1,5 +1,5 @@
 import 'package:boilerplate/features/account/view/new_account.dart';
-import 'package:boilerplate/features/home/home_page.dart';
+import 'package:boilerplate/features/home/view/home_page.dart';
 import 'package:boilerplate/features/temp/navigator_bar.dart';
 import 'package:boilerplate/router/app_router.dart';
 import 'package:flutter/material.dart';

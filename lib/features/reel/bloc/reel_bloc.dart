@@ -28,8 +28,11 @@ class ReelBloc extends Bloc<ReelEvent, ReelState> {
     _localStorageService = localStorageService;
     on<_getReel>(_onGetReel);
     on<_newReel>(_onNewReel);
+    on<_deleteReel>(_onDeleteReel);
+    on<_likeReel>(_onLikeReel);
     on<_ChangeTitle>(_onChangeTitle);
     on<_ChangeVideo>(_onChangeVideo);
+    on<_ChangeReelId>(_onChangeReelId);
     // on<_getPostById>(_onGetPostById);
   }
 
@@ -65,6 +68,14 @@ class ReelBloc extends Bloc<ReelEvent, ReelState> {
   void _onChangeVideo(_ChangeVideo event, Emitter<ReelState> emit) {
     try {
       emit(state.copyWith(video: event.video));
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  void _onChangeReelId(_ChangeReelId event, Emitter<ReelState> emit) {
+    try {
+      emit(state.copyWith(reelId: event.reelId));
     } catch (e) {
       rethrow;
     }
@@ -115,6 +126,34 @@ class ReelBloc extends Bloc<ReelEvent, ReelState> {
           notification: _NotificationInsertFailed(
             message: 'Create failed: ${e.toString()}',
           )));
+    }
+  }
+
+  void _onDeleteReel(_deleteReel event, Emitter<ReelState> emit) {
+    try {
+      String token = _localStorageService.getString(key: AppKeys.token) ?? '';
+      dynamic response = _reelService.deleteReel(token, state.reelId);
+    } catch (e) {
+      emit(state.copyWith(
+          loading: false,
+          isSuccess: false,
+          errorMessage: 'Error $e',
+          notification: _NotificationInsertFailed(
+              message: 'Create failed: ${e.toString()}')));
+    }
+  }
+
+  void _onLikeReel(_likeReel event, Emitter<ReelState> emit) {
+    try {
+      String token = _localStorageService.getString(key: AppKeys.token) ?? '';
+      dynamic response = _reelService.deleteReel(token, state.reelId);
+    } catch (e) {
+      emit(state.copyWith(
+          loading: false,
+          isSuccess: false,
+          errorMessage: 'Error $e',
+          notification: _NotificationInsertFailed(
+              message: 'Create failed: ${e.toString()}')));
     }
   }
 }

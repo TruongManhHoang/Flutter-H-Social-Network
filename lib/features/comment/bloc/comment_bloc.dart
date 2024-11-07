@@ -32,8 +32,11 @@ class CommentBloc extends Bloc<CommentEvent, CommentState> {
     on<_selectCommentId>(_onSelectCommentId);
     on<_likeComment>(_onLikeComment);
     on<_newComment>(_onNewComment);
+    on<_newCommentForReel>(_onNewCommentForReel);
     on<_selectContent>(_onSelectContent);
     on<_selectPostId>(_onSelectPostId);
+    on<_selectReelId>(_onSelectReelId);
+    // on<_selectPostId>(_onSelectPostId);
     // on<_ChangeImage>(_onChangeImage);
     // on<_ChangeVideo>(_onChangeVideo);
   }
@@ -93,6 +96,14 @@ class CommentBloc extends Bloc<CommentEvent, CommentState> {
     }
   }
 
+  void _onSelectReelId(_selectReelId event, Emitter<CommentState> emit) {
+    try {
+      emit(state.copyWith(reelId: event.reelId));
+    } catch (e) {
+      emit(state.copyWith(loading: false, errorMessage: "Error: $e"));
+    }
+  }
+
   void _onNewComment(_newComment event, Emitter<CommentState> emit) async {
     try {
       if (state.content == null || state.postId == null) {
@@ -134,76 +145,49 @@ class CommentBloc extends Bloc<CommentEvent, CommentState> {
           )));
     }
   }
-//   void _onChangeCaption(_ChangeCaption event, Emitter<StoryState> emit) {
-//     try {
-//       emit(state.copyWith(caption: event.caption));
-//     } catch (e) {
-//       rethrow;
-//     }
-//   }
 
-//   void _onChangeImage(_ChangeImage event, Emitter<StoryState> emit) {
-//     try {
-//       emit(state.copyWith(image: event.image));
-//     } catch (e) {
-//       rethrow;
-//     }
-//   }
-
-//   void _onChangeVideo(_ChangeVideo event, Emitter<StoryState> emit) {
-//     try {
-//       emit(state.copyWith(video: event.video));
-//     } catch (e) {
-//       rethrow;
-//     }
-//   }
-
-//   void _onNewStory(_newStory event, Emitter<StoryState> emit) async {
-//     try {
-//       emit(state.copyWith(
-//         loading: true,
-//         isSuccess: false,
-//       ));
-//       if (state.caption == null || state.image == null || state.video == null) {
-//         emit(state.copyWith(
-//             loading: false,
-//             notification:
-//                 _NotificationInsertFailed(message: 'No post data found!')));
-//       }
-//       Story story = Story(
-//         id: 0,
-//         caption: state.caption,
-//         image: state.image,
-
-//         // video: state.video,
-//         user: User(
-//             id: 0,
-//             firstName: '',
-//             lastName: '',
-//             email: '',
-//             password: '',
-//             gender: ''),
-//       );
-
-//       String token = _localStorageService.getString(key: AppKeys.token) ?? '';
-//       dynamic payload = story.toJson();
-//       dynamic response = await _storyService.createStory(token, payload);
-
-//       emit(state.copyWith(
-//           isSuccess: true,
-//           story: story,
-//           loading: false,
-//           notification:
-//               _NotificationInsertSuccess(message: 'Create successful')));
-//     } catch (e) {
-//       emit(state.copyWith(
-//           loading: false,
-//           notification: _NotificationInsertFailed(
-//             message: 'Create failed: ${e.toString()}',
-//           )));
-//     }
-//   }
-// }
+  void _onNewCommentForReel(
+      _newCommentForReel event, Emitter<CommentState> emit) async {
+    try {
+      if (state.content == null || state.postId == null) {
+        emit(state.copyWith(
+            loading: false,
+            notification:
+                _NotificationInsertFailed(message: 'No post data found!')));
+      }
+      Comment comment = Comment(
+          id: 0,
+          content: state.content,
+          user: User(
+              id: 0,
+              firstName: '',
+              lastName: '',
+              email: '',
+              password: '',
+              gender: '',
+              savedPosts: [],
+              followers: [],
+              followings: []),
+          liked: []);
+      String token = _localStorageService.getString(key: AppKeys.token) ?? '';
+      dynamic payload = comment.toJson();
+      dynamic response =
+          await _commentService.createComment(state.reelId, token, payload);
+      emit(state.copyWith(
+          isSuccess: true,
+          commentReel: comment,
+          loading: false,
+          notification:
+              _NotificationInsertSuccess(message: 'Create successful')));
+    } catch (e) {
+      emit(state.copyWith(
+          loading: false,
+          errorMessage: "Error: $e",
+          notification: _NotificationInsertFailed(
+            message: 'Create failed: ${e.toString()}',
+          )));
+    }
+  }
 }
 
 void deleteStory() {}

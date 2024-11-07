@@ -20,30 +20,36 @@ mixin _$CommentEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() getComment,
     required TResult Function() newComment,
+    required TResult Function() newCommentForReel,
     required TResult Function(int id) selectCommentId,
     required TResult Function() likeComment,
     required TResult Function(String content) selectContent,
     required TResult Function(int postId) selectPostId,
+    required TResult Function(int reelId) selectReelId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getComment,
     TResult? Function()? newComment,
+    TResult? Function()? newCommentForReel,
     TResult? Function(int id)? selectCommentId,
     TResult? Function()? likeComment,
     TResult? Function(String content)? selectContent,
     TResult? Function(int postId)? selectPostId,
+    TResult? Function(int reelId)? selectReelId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getComment,
     TResult Function()? newComment,
+    TResult Function()? newCommentForReel,
     TResult Function(int id)? selectCommentId,
     TResult Function()? likeComment,
     TResult Function(String content)? selectContent,
     TResult Function(int postId)? selectPostId,
+    TResult Function(int reelId)? selectReelId,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,30 +57,36 @@ mixin _$CommentEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_getComment value) getComment,
     required TResult Function(_newComment value) newComment,
+    required TResult Function(_newCommentForReel value) newCommentForReel,
     required TResult Function(_selectCommentId value) selectCommentId,
     required TResult Function(_likeComment value) likeComment,
     required TResult Function(_selectContent value) selectContent,
     required TResult Function(_selectPostId value) selectPostId,
+    required TResult Function(_selectReelId value) selectReelId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_getComment value)? getComment,
     TResult? Function(_newComment value)? newComment,
+    TResult? Function(_newCommentForReel value)? newCommentForReel,
     TResult? Function(_selectCommentId value)? selectCommentId,
     TResult? Function(_likeComment value)? likeComment,
     TResult? Function(_selectContent value)? selectContent,
     TResult? Function(_selectPostId value)? selectPostId,
+    TResult? Function(_selectReelId value)? selectReelId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_getComment value)? getComment,
     TResult Function(_newComment value)? newComment,
+    TResult Function(_newCommentForReel value)? newCommentForReel,
     TResult Function(_selectCommentId value)? selectCommentId,
     TResult Function(_likeComment value)? likeComment,
     TResult Function(_selectContent value)? selectContent,
     TResult Function(_selectPostId value)? selectPostId,
+    TResult Function(_selectReelId value)? selectReelId,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -144,10 +156,12 @@ class _$getCommentImpl implements _getComment {
   TResult when<TResult extends Object?>({
     required TResult Function() getComment,
     required TResult Function() newComment,
+    required TResult Function() newCommentForReel,
     required TResult Function(int id) selectCommentId,
     required TResult Function() likeComment,
     required TResult Function(String content) selectContent,
     required TResult Function(int postId) selectPostId,
+    required TResult Function(int reelId) selectReelId,
   }) {
     return getComment();
   }
@@ -157,10 +171,12 @@ class _$getCommentImpl implements _getComment {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getComment,
     TResult? Function()? newComment,
+    TResult? Function()? newCommentForReel,
     TResult? Function(int id)? selectCommentId,
     TResult? Function()? likeComment,
     TResult? Function(String content)? selectContent,
     TResult? Function(int postId)? selectPostId,
+    TResult? Function(int reelId)? selectReelId,
   }) {
     return getComment?.call();
   }
@@ -170,10 +186,12 @@ class _$getCommentImpl implements _getComment {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getComment,
     TResult Function()? newComment,
+    TResult Function()? newCommentForReel,
     TResult Function(int id)? selectCommentId,
     TResult Function()? likeComment,
     TResult Function(String content)? selectContent,
     TResult Function(int postId)? selectPostId,
+    TResult Function(int reelId)? selectReelId,
     required TResult orElse(),
   }) {
     if (getComment != null) {
@@ -187,10 +205,12 @@ class _$getCommentImpl implements _getComment {
   TResult map<TResult extends Object?>({
     required TResult Function(_getComment value) getComment,
     required TResult Function(_newComment value) newComment,
+    required TResult Function(_newCommentForReel value) newCommentForReel,
     required TResult Function(_selectCommentId value) selectCommentId,
     required TResult Function(_likeComment value) likeComment,
     required TResult Function(_selectContent value) selectContent,
     required TResult Function(_selectPostId value) selectPostId,
+    required TResult Function(_selectReelId value) selectReelId,
   }) {
     return getComment(this);
   }
@@ -200,10 +220,12 @@ class _$getCommentImpl implements _getComment {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_getComment value)? getComment,
     TResult? Function(_newComment value)? newComment,
+    TResult? Function(_newCommentForReel value)? newCommentForReel,
     TResult? Function(_selectCommentId value)? selectCommentId,
     TResult? Function(_likeComment value)? likeComment,
     TResult? Function(_selectContent value)? selectContent,
     TResult? Function(_selectPostId value)? selectPostId,
+    TResult? Function(_selectReelId value)? selectReelId,
   }) {
     return getComment?.call(this);
   }
@@ -213,10 +235,12 @@ class _$getCommentImpl implements _getComment {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_getComment value)? getComment,
     TResult Function(_newComment value)? newComment,
+    TResult Function(_newCommentForReel value)? newCommentForReel,
     TResult Function(_selectCommentId value)? selectCommentId,
     TResult Function(_likeComment value)? likeComment,
     TResult Function(_selectContent value)? selectContent,
     TResult Function(_selectPostId value)? selectPostId,
+    TResult Function(_selectReelId value)? selectReelId,
     required TResult orElse(),
   }) {
     if (getComment != null) {
@@ -273,10 +297,12 @@ class _$newCommentImpl implements _newComment {
   TResult when<TResult extends Object?>({
     required TResult Function() getComment,
     required TResult Function() newComment,
+    required TResult Function() newCommentForReel,
     required TResult Function(int id) selectCommentId,
     required TResult Function() likeComment,
     required TResult Function(String content) selectContent,
     required TResult Function(int postId) selectPostId,
+    required TResult Function(int reelId) selectReelId,
   }) {
     return newComment();
   }
@@ -286,10 +312,12 @@ class _$newCommentImpl implements _newComment {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getComment,
     TResult? Function()? newComment,
+    TResult? Function()? newCommentForReel,
     TResult? Function(int id)? selectCommentId,
     TResult? Function()? likeComment,
     TResult? Function(String content)? selectContent,
     TResult? Function(int postId)? selectPostId,
+    TResult? Function(int reelId)? selectReelId,
   }) {
     return newComment?.call();
   }
@@ -299,10 +327,12 @@ class _$newCommentImpl implements _newComment {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getComment,
     TResult Function()? newComment,
+    TResult Function()? newCommentForReel,
     TResult Function(int id)? selectCommentId,
     TResult Function()? likeComment,
     TResult Function(String content)? selectContent,
     TResult Function(int postId)? selectPostId,
+    TResult Function(int reelId)? selectReelId,
     required TResult orElse(),
   }) {
     if (newComment != null) {
@@ -316,10 +346,12 @@ class _$newCommentImpl implements _newComment {
   TResult map<TResult extends Object?>({
     required TResult Function(_getComment value) getComment,
     required TResult Function(_newComment value) newComment,
+    required TResult Function(_newCommentForReel value) newCommentForReel,
     required TResult Function(_selectCommentId value) selectCommentId,
     required TResult Function(_likeComment value) likeComment,
     required TResult Function(_selectContent value) selectContent,
     required TResult Function(_selectPostId value) selectPostId,
+    required TResult Function(_selectReelId value) selectReelId,
   }) {
     return newComment(this);
   }
@@ -329,10 +361,12 @@ class _$newCommentImpl implements _newComment {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_getComment value)? getComment,
     TResult? Function(_newComment value)? newComment,
+    TResult? Function(_newCommentForReel value)? newCommentForReel,
     TResult? Function(_selectCommentId value)? selectCommentId,
     TResult? Function(_likeComment value)? likeComment,
     TResult? Function(_selectContent value)? selectContent,
     TResult? Function(_selectPostId value)? selectPostId,
+    TResult? Function(_selectReelId value)? selectReelId,
   }) {
     return newComment?.call(this);
   }
@@ -342,10 +376,12 @@ class _$newCommentImpl implements _newComment {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_getComment value)? getComment,
     TResult Function(_newComment value)? newComment,
+    TResult Function(_newCommentForReel value)? newCommentForReel,
     TResult Function(_selectCommentId value)? selectCommentId,
     TResult Function(_likeComment value)? likeComment,
     TResult Function(_selectContent value)? selectContent,
     TResult Function(_selectPostId value)? selectPostId,
+    TResult Function(_selectReelId value)? selectReelId,
     required TResult orElse(),
   }) {
     if (newComment != null) {
@@ -357,6 +393,147 @@ class _$newCommentImpl implements _newComment {
 
 abstract class _newComment implements CommentEvent {
   const factory _newComment() = _$newCommentImpl;
+}
+
+/// @nodoc
+abstract class _$$newCommentForReelImplCopyWith<$Res> {
+  factory _$$newCommentForReelImplCopyWith(_$newCommentForReelImpl value,
+          $Res Function(_$newCommentForReelImpl) then) =
+      __$$newCommentForReelImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$newCommentForReelImplCopyWithImpl<$Res>
+    extends _$CommentEventCopyWithImpl<$Res, _$newCommentForReelImpl>
+    implements _$$newCommentForReelImplCopyWith<$Res> {
+  __$$newCommentForReelImplCopyWithImpl(_$newCommentForReelImpl _value,
+      $Res Function(_$newCommentForReelImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CommentEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$newCommentForReelImpl implements _newCommentForReel {
+  const _$newCommentForReelImpl();
+
+  @override
+  String toString() {
+    return 'CommentEvent.newCommentForReel()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$newCommentForReelImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getComment,
+    required TResult Function() newComment,
+    required TResult Function() newCommentForReel,
+    required TResult Function(int id) selectCommentId,
+    required TResult Function() likeComment,
+    required TResult Function(String content) selectContent,
+    required TResult Function(int postId) selectPostId,
+    required TResult Function(int reelId) selectReelId,
+  }) {
+    return newCommentForReel();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getComment,
+    TResult? Function()? newComment,
+    TResult? Function()? newCommentForReel,
+    TResult? Function(int id)? selectCommentId,
+    TResult? Function()? likeComment,
+    TResult? Function(String content)? selectContent,
+    TResult? Function(int postId)? selectPostId,
+    TResult? Function(int reelId)? selectReelId,
+  }) {
+    return newCommentForReel?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getComment,
+    TResult Function()? newComment,
+    TResult Function()? newCommentForReel,
+    TResult Function(int id)? selectCommentId,
+    TResult Function()? likeComment,
+    TResult Function(String content)? selectContent,
+    TResult Function(int postId)? selectPostId,
+    TResult Function(int reelId)? selectReelId,
+    required TResult orElse(),
+  }) {
+    if (newCommentForReel != null) {
+      return newCommentForReel();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_getComment value) getComment,
+    required TResult Function(_newComment value) newComment,
+    required TResult Function(_newCommentForReel value) newCommentForReel,
+    required TResult Function(_selectCommentId value) selectCommentId,
+    required TResult Function(_likeComment value) likeComment,
+    required TResult Function(_selectContent value) selectContent,
+    required TResult Function(_selectPostId value) selectPostId,
+    required TResult Function(_selectReelId value) selectReelId,
+  }) {
+    return newCommentForReel(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_getComment value)? getComment,
+    TResult? Function(_newComment value)? newComment,
+    TResult? Function(_newCommentForReel value)? newCommentForReel,
+    TResult? Function(_selectCommentId value)? selectCommentId,
+    TResult? Function(_likeComment value)? likeComment,
+    TResult? Function(_selectContent value)? selectContent,
+    TResult? Function(_selectPostId value)? selectPostId,
+    TResult? Function(_selectReelId value)? selectReelId,
+  }) {
+    return newCommentForReel?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_getComment value)? getComment,
+    TResult Function(_newComment value)? newComment,
+    TResult Function(_newCommentForReel value)? newCommentForReel,
+    TResult Function(_selectCommentId value)? selectCommentId,
+    TResult Function(_likeComment value)? likeComment,
+    TResult Function(_selectContent value)? selectContent,
+    TResult Function(_selectPostId value)? selectPostId,
+    TResult Function(_selectReelId value)? selectReelId,
+    required TResult orElse(),
+  }) {
+    if (newCommentForReel != null) {
+      return newCommentForReel(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _newCommentForReel implements CommentEvent {
+  const factory _newCommentForReel() = _$newCommentForReelImpl;
 }
 
 /// @nodoc
@@ -430,10 +607,12 @@ class _$selectCommentIdImpl implements _selectCommentId {
   TResult when<TResult extends Object?>({
     required TResult Function() getComment,
     required TResult Function() newComment,
+    required TResult Function() newCommentForReel,
     required TResult Function(int id) selectCommentId,
     required TResult Function() likeComment,
     required TResult Function(String content) selectContent,
     required TResult Function(int postId) selectPostId,
+    required TResult Function(int reelId) selectReelId,
   }) {
     return selectCommentId(id);
   }
@@ -443,10 +622,12 @@ class _$selectCommentIdImpl implements _selectCommentId {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getComment,
     TResult? Function()? newComment,
+    TResult? Function()? newCommentForReel,
     TResult? Function(int id)? selectCommentId,
     TResult? Function()? likeComment,
     TResult? Function(String content)? selectContent,
     TResult? Function(int postId)? selectPostId,
+    TResult? Function(int reelId)? selectReelId,
   }) {
     return selectCommentId?.call(id);
   }
@@ -456,10 +637,12 @@ class _$selectCommentIdImpl implements _selectCommentId {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getComment,
     TResult Function()? newComment,
+    TResult Function()? newCommentForReel,
     TResult Function(int id)? selectCommentId,
     TResult Function()? likeComment,
     TResult Function(String content)? selectContent,
     TResult Function(int postId)? selectPostId,
+    TResult Function(int reelId)? selectReelId,
     required TResult orElse(),
   }) {
     if (selectCommentId != null) {
@@ -473,10 +656,12 @@ class _$selectCommentIdImpl implements _selectCommentId {
   TResult map<TResult extends Object?>({
     required TResult Function(_getComment value) getComment,
     required TResult Function(_newComment value) newComment,
+    required TResult Function(_newCommentForReel value) newCommentForReel,
     required TResult Function(_selectCommentId value) selectCommentId,
     required TResult Function(_likeComment value) likeComment,
     required TResult Function(_selectContent value) selectContent,
     required TResult Function(_selectPostId value) selectPostId,
+    required TResult Function(_selectReelId value) selectReelId,
   }) {
     return selectCommentId(this);
   }
@@ -486,10 +671,12 @@ class _$selectCommentIdImpl implements _selectCommentId {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_getComment value)? getComment,
     TResult? Function(_newComment value)? newComment,
+    TResult? Function(_newCommentForReel value)? newCommentForReel,
     TResult? Function(_selectCommentId value)? selectCommentId,
     TResult? Function(_likeComment value)? likeComment,
     TResult? Function(_selectContent value)? selectContent,
     TResult? Function(_selectPostId value)? selectPostId,
+    TResult? Function(_selectReelId value)? selectReelId,
   }) {
     return selectCommentId?.call(this);
   }
@@ -499,10 +686,12 @@ class _$selectCommentIdImpl implements _selectCommentId {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_getComment value)? getComment,
     TResult Function(_newComment value)? newComment,
+    TResult Function(_newCommentForReel value)? newCommentForReel,
     TResult Function(_selectCommentId value)? selectCommentId,
     TResult Function(_likeComment value)? likeComment,
     TResult Function(_selectContent value)? selectContent,
     TResult Function(_selectPostId value)? selectPostId,
+    TResult Function(_selectReelId value)? selectReelId,
     required TResult orElse(),
   }) {
     if (selectCommentId != null) {
@@ -567,10 +756,12 @@ class _$likeCommentImpl implements _likeComment {
   TResult when<TResult extends Object?>({
     required TResult Function() getComment,
     required TResult Function() newComment,
+    required TResult Function() newCommentForReel,
     required TResult Function(int id) selectCommentId,
     required TResult Function() likeComment,
     required TResult Function(String content) selectContent,
     required TResult Function(int postId) selectPostId,
+    required TResult Function(int reelId) selectReelId,
   }) {
     return likeComment();
   }
@@ -580,10 +771,12 @@ class _$likeCommentImpl implements _likeComment {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getComment,
     TResult? Function()? newComment,
+    TResult? Function()? newCommentForReel,
     TResult? Function(int id)? selectCommentId,
     TResult? Function()? likeComment,
     TResult? Function(String content)? selectContent,
     TResult? Function(int postId)? selectPostId,
+    TResult? Function(int reelId)? selectReelId,
   }) {
     return likeComment?.call();
   }
@@ -593,10 +786,12 @@ class _$likeCommentImpl implements _likeComment {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getComment,
     TResult Function()? newComment,
+    TResult Function()? newCommentForReel,
     TResult Function(int id)? selectCommentId,
     TResult Function()? likeComment,
     TResult Function(String content)? selectContent,
     TResult Function(int postId)? selectPostId,
+    TResult Function(int reelId)? selectReelId,
     required TResult orElse(),
   }) {
     if (likeComment != null) {
@@ -610,10 +805,12 @@ class _$likeCommentImpl implements _likeComment {
   TResult map<TResult extends Object?>({
     required TResult Function(_getComment value) getComment,
     required TResult Function(_newComment value) newComment,
+    required TResult Function(_newCommentForReel value) newCommentForReel,
     required TResult Function(_selectCommentId value) selectCommentId,
     required TResult Function(_likeComment value) likeComment,
     required TResult Function(_selectContent value) selectContent,
     required TResult Function(_selectPostId value) selectPostId,
+    required TResult Function(_selectReelId value) selectReelId,
   }) {
     return likeComment(this);
   }
@@ -623,10 +820,12 @@ class _$likeCommentImpl implements _likeComment {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_getComment value)? getComment,
     TResult? Function(_newComment value)? newComment,
+    TResult? Function(_newCommentForReel value)? newCommentForReel,
     TResult? Function(_selectCommentId value)? selectCommentId,
     TResult? Function(_likeComment value)? likeComment,
     TResult? Function(_selectContent value)? selectContent,
     TResult? Function(_selectPostId value)? selectPostId,
+    TResult? Function(_selectReelId value)? selectReelId,
   }) {
     return likeComment?.call(this);
   }
@@ -636,10 +835,12 @@ class _$likeCommentImpl implements _likeComment {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_getComment value)? getComment,
     TResult Function(_newComment value)? newComment,
+    TResult Function(_newCommentForReel value)? newCommentForReel,
     TResult Function(_selectCommentId value)? selectCommentId,
     TResult Function(_likeComment value)? likeComment,
     TResult Function(_selectContent value)? selectContent,
     TResult Function(_selectPostId value)? selectPostId,
+    TResult Function(_selectReelId value)? selectReelId,
     required TResult orElse(),
   }) {
     if (likeComment != null) {
@@ -723,10 +924,12 @@ class _$selectContentImpl implements _selectContent {
   TResult when<TResult extends Object?>({
     required TResult Function() getComment,
     required TResult Function() newComment,
+    required TResult Function() newCommentForReel,
     required TResult Function(int id) selectCommentId,
     required TResult Function() likeComment,
     required TResult Function(String content) selectContent,
     required TResult Function(int postId) selectPostId,
+    required TResult Function(int reelId) selectReelId,
   }) {
     return selectContent(content);
   }
@@ -736,10 +939,12 @@ class _$selectContentImpl implements _selectContent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getComment,
     TResult? Function()? newComment,
+    TResult? Function()? newCommentForReel,
     TResult? Function(int id)? selectCommentId,
     TResult? Function()? likeComment,
     TResult? Function(String content)? selectContent,
     TResult? Function(int postId)? selectPostId,
+    TResult? Function(int reelId)? selectReelId,
   }) {
     return selectContent?.call(content);
   }
@@ -749,10 +954,12 @@ class _$selectContentImpl implements _selectContent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getComment,
     TResult Function()? newComment,
+    TResult Function()? newCommentForReel,
     TResult Function(int id)? selectCommentId,
     TResult Function()? likeComment,
     TResult Function(String content)? selectContent,
     TResult Function(int postId)? selectPostId,
+    TResult Function(int reelId)? selectReelId,
     required TResult orElse(),
   }) {
     if (selectContent != null) {
@@ -766,10 +973,12 @@ class _$selectContentImpl implements _selectContent {
   TResult map<TResult extends Object?>({
     required TResult Function(_getComment value) getComment,
     required TResult Function(_newComment value) newComment,
+    required TResult Function(_newCommentForReel value) newCommentForReel,
     required TResult Function(_selectCommentId value) selectCommentId,
     required TResult Function(_likeComment value) likeComment,
     required TResult Function(_selectContent value) selectContent,
     required TResult Function(_selectPostId value) selectPostId,
+    required TResult Function(_selectReelId value) selectReelId,
   }) {
     return selectContent(this);
   }
@@ -779,10 +988,12 @@ class _$selectContentImpl implements _selectContent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_getComment value)? getComment,
     TResult? Function(_newComment value)? newComment,
+    TResult? Function(_newCommentForReel value)? newCommentForReel,
     TResult? Function(_selectCommentId value)? selectCommentId,
     TResult? Function(_likeComment value)? likeComment,
     TResult? Function(_selectContent value)? selectContent,
     TResult? Function(_selectPostId value)? selectPostId,
+    TResult? Function(_selectReelId value)? selectReelId,
   }) {
     return selectContent?.call(this);
   }
@@ -792,10 +1003,12 @@ class _$selectContentImpl implements _selectContent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_getComment value)? getComment,
     TResult Function(_newComment value)? newComment,
+    TResult Function(_newCommentForReel value)? newCommentForReel,
     TResult Function(_selectCommentId value)? selectCommentId,
     TResult Function(_likeComment value)? likeComment,
     TResult Function(_selectContent value)? selectContent,
     TResult Function(_selectPostId value)? selectPostId,
+    TResult Function(_selectReelId value)? selectReelId,
     required TResult orElse(),
   }) {
     if (selectContent != null) {
@@ -887,10 +1100,12 @@ class _$selectPostIdImpl implements _selectPostId {
   TResult when<TResult extends Object?>({
     required TResult Function() getComment,
     required TResult Function() newComment,
+    required TResult Function() newCommentForReel,
     required TResult Function(int id) selectCommentId,
     required TResult Function() likeComment,
     required TResult Function(String content) selectContent,
     required TResult Function(int postId) selectPostId,
+    required TResult Function(int reelId) selectReelId,
   }) {
     return selectPostId(postId);
   }
@@ -900,10 +1115,12 @@ class _$selectPostIdImpl implements _selectPostId {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getComment,
     TResult? Function()? newComment,
+    TResult? Function()? newCommentForReel,
     TResult? Function(int id)? selectCommentId,
     TResult? Function()? likeComment,
     TResult? Function(String content)? selectContent,
     TResult? Function(int postId)? selectPostId,
+    TResult? Function(int reelId)? selectReelId,
   }) {
     return selectPostId?.call(postId);
   }
@@ -913,10 +1130,12 @@ class _$selectPostIdImpl implements _selectPostId {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getComment,
     TResult Function()? newComment,
+    TResult Function()? newCommentForReel,
     TResult Function(int id)? selectCommentId,
     TResult Function()? likeComment,
     TResult Function(String content)? selectContent,
     TResult Function(int postId)? selectPostId,
+    TResult Function(int reelId)? selectReelId,
     required TResult orElse(),
   }) {
     if (selectPostId != null) {
@@ -930,10 +1149,12 @@ class _$selectPostIdImpl implements _selectPostId {
   TResult map<TResult extends Object?>({
     required TResult Function(_getComment value) getComment,
     required TResult Function(_newComment value) newComment,
+    required TResult Function(_newCommentForReel value) newCommentForReel,
     required TResult Function(_selectCommentId value) selectCommentId,
     required TResult Function(_likeComment value) likeComment,
     required TResult Function(_selectContent value) selectContent,
     required TResult Function(_selectPostId value) selectPostId,
+    required TResult Function(_selectReelId value) selectReelId,
   }) {
     return selectPostId(this);
   }
@@ -943,10 +1164,12 @@ class _$selectPostIdImpl implements _selectPostId {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_getComment value)? getComment,
     TResult? Function(_newComment value)? newComment,
+    TResult? Function(_newCommentForReel value)? newCommentForReel,
     TResult? Function(_selectCommentId value)? selectCommentId,
     TResult? Function(_likeComment value)? likeComment,
     TResult? Function(_selectContent value)? selectContent,
     TResult? Function(_selectPostId value)? selectPostId,
+    TResult? Function(_selectReelId value)? selectReelId,
   }) {
     return selectPostId?.call(this);
   }
@@ -956,10 +1179,12 @@ class _$selectPostIdImpl implements _selectPostId {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_getComment value)? getComment,
     TResult Function(_newComment value)? newComment,
+    TResult Function(_newCommentForReel value)? newCommentForReel,
     TResult Function(_selectCommentId value)? selectCommentId,
     TResult Function(_likeComment value)? likeComment,
     TResult Function(_selectContent value)? selectContent,
     TResult Function(_selectPostId value)? selectPostId,
+    TResult Function(_selectReelId value)? selectReelId,
     required TResult orElse(),
   }) {
     if (selectPostId != null) {
@@ -982,17 +1207,195 @@ abstract class _selectPostId implements CommentEvent {
 }
 
 /// @nodoc
+abstract class _$$selectReelIdImplCopyWith<$Res> {
+  factory _$$selectReelIdImplCopyWith(
+          _$selectReelIdImpl value, $Res Function(_$selectReelIdImpl) then) =
+      __$$selectReelIdImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int reelId});
+}
+
+/// @nodoc
+class __$$selectReelIdImplCopyWithImpl<$Res>
+    extends _$CommentEventCopyWithImpl<$Res, _$selectReelIdImpl>
+    implements _$$selectReelIdImplCopyWith<$Res> {
+  __$$selectReelIdImplCopyWithImpl(
+      _$selectReelIdImpl _value, $Res Function(_$selectReelIdImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CommentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? reelId = null,
+  }) {
+    return _then(_$selectReelIdImpl(
+      null == reelId
+          ? _value.reelId
+          : reelId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$selectReelIdImpl implements _selectReelId {
+  const _$selectReelIdImpl(this.reelId);
+
+  @override
+  final int reelId;
+
+  @override
+  String toString() {
+    return 'CommentEvent.selectReelId(reelId: $reelId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$selectReelIdImpl &&
+            (identical(other.reelId, reelId) || other.reelId == reelId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, reelId);
+
+  /// Create a copy of CommentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$selectReelIdImplCopyWith<_$selectReelIdImpl> get copyWith =>
+      __$$selectReelIdImplCopyWithImpl<_$selectReelIdImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getComment,
+    required TResult Function() newComment,
+    required TResult Function() newCommentForReel,
+    required TResult Function(int id) selectCommentId,
+    required TResult Function() likeComment,
+    required TResult Function(String content) selectContent,
+    required TResult Function(int postId) selectPostId,
+    required TResult Function(int reelId) selectReelId,
+  }) {
+    return selectReelId(reelId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getComment,
+    TResult? Function()? newComment,
+    TResult? Function()? newCommentForReel,
+    TResult? Function(int id)? selectCommentId,
+    TResult? Function()? likeComment,
+    TResult? Function(String content)? selectContent,
+    TResult? Function(int postId)? selectPostId,
+    TResult? Function(int reelId)? selectReelId,
+  }) {
+    return selectReelId?.call(reelId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getComment,
+    TResult Function()? newComment,
+    TResult Function()? newCommentForReel,
+    TResult Function(int id)? selectCommentId,
+    TResult Function()? likeComment,
+    TResult Function(String content)? selectContent,
+    TResult Function(int postId)? selectPostId,
+    TResult Function(int reelId)? selectReelId,
+    required TResult orElse(),
+  }) {
+    if (selectReelId != null) {
+      return selectReelId(reelId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_getComment value) getComment,
+    required TResult Function(_newComment value) newComment,
+    required TResult Function(_newCommentForReel value) newCommentForReel,
+    required TResult Function(_selectCommentId value) selectCommentId,
+    required TResult Function(_likeComment value) likeComment,
+    required TResult Function(_selectContent value) selectContent,
+    required TResult Function(_selectPostId value) selectPostId,
+    required TResult Function(_selectReelId value) selectReelId,
+  }) {
+    return selectReelId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_getComment value)? getComment,
+    TResult? Function(_newComment value)? newComment,
+    TResult? Function(_newCommentForReel value)? newCommentForReel,
+    TResult? Function(_selectCommentId value)? selectCommentId,
+    TResult? Function(_likeComment value)? likeComment,
+    TResult? Function(_selectContent value)? selectContent,
+    TResult? Function(_selectPostId value)? selectPostId,
+    TResult? Function(_selectReelId value)? selectReelId,
+  }) {
+    return selectReelId?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_getComment value)? getComment,
+    TResult Function(_newComment value)? newComment,
+    TResult Function(_newCommentForReel value)? newCommentForReel,
+    TResult Function(_selectCommentId value)? selectCommentId,
+    TResult Function(_likeComment value)? likeComment,
+    TResult Function(_selectContent value)? selectContent,
+    TResult Function(_selectPostId value)? selectPostId,
+    TResult Function(_selectReelId value)? selectReelId,
+    required TResult orElse(),
+  }) {
+    if (selectReelId != null) {
+      return selectReelId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _selectReelId implements CommentEvent {
+  const factory _selectReelId(final int reelId) = _$selectReelIdImpl;
+
+  int get reelId;
+
+  /// Create a copy of CommentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$selectReelIdImplCopyWith<_$selectReelIdImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$CommentState {
   UIStatus get status => throw _privateConstructorUsedError;
   CommentNotification? get notification => throw _privateConstructorUsedError;
   bool get loading => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
   int get postId => throw _privateConstructorUsedError;
+  int get reelId => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
   bool get isSuccess => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
   List<Comment> get comments => throw _privateConstructorUsedError;
   Comment? get comment => throw _privateConstructorUsedError;
+  Comment? get commentReel => throw _privateConstructorUsedError;
 
   /// Create a copy of CommentState
   /// with the given fields replaced by the non-null parameter values.
@@ -1013,11 +1416,13 @@ abstract class $CommentStateCopyWith<$Res> {
       bool loading,
       String content,
       int postId,
+      int reelId,
       int id,
       bool isSuccess,
       String errorMessage,
       List<Comment> comments,
-      Comment? comment});
+      Comment? comment,
+      Comment? commentReel});
 
   $UIStatusCopyWith<$Res> get status;
   $CommentNotificationCopyWith<$Res>? get notification;
@@ -1043,11 +1448,13 @@ class _$CommentStateCopyWithImpl<$Res, $Val extends CommentState>
     Object? loading = null,
     Object? content = null,
     Object? postId = null,
+    Object? reelId = null,
     Object? id = null,
     Object? isSuccess = null,
     Object? errorMessage = null,
     Object? comments = null,
     Object? comment = freezed,
+    Object? commentReel = freezed,
   }) {
     return _then(_value.copyWith(
       status: null == status
@@ -1070,6 +1477,10 @@ class _$CommentStateCopyWithImpl<$Res, $Val extends CommentState>
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
+      reelId: null == reelId
+          ? _value.reelId
+          : reelId // ignore: cast_nullable_to_non_nullable
+              as int,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1089,6 +1500,10 @@ class _$CommentStateCopyWithImpl<$Res, $Val extends CommentState>
       comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
+              as Comment?,
+      commentReel: freezed == commentReel
+          ? _value.commentReel
+          : commentReel // ignore: cast_nullable_to_non_nullable
               as Comment?,
     ) as $Val);
   }
@@ -1132,11 +1547,13 @@ abstract class _$$CommentStateImplCopyWith<$Res>
       bool loading,
       String content,
       int postId,
+      int reelId,
       int id,
       bool isSuccess,
       String errorMessage,
       List<Comment> comments,
-      Comment? comment});
+      Comment? comment,
+      Comment? commentReel});
 
   @override
   $UIStatusCopyWith<$Res> get status;
@@ -1162,11 +1579,13 @@ class __$$CommentStateImplCopyWithImpl<$Res>
     Object? loading = null,
     Object? content = null,
     Object? postId = null,
+    Object? reelId = null,
     Object? id = null,
     Object? isSuccess = null,
     Object? errorMessage = null,
     Object? comments = null,
     Object? comment = freezed,
+    Object? commentReel = freezed,
   }) {
     return _then(_$CommentStateImpl(
       status: null == status
@@ -1189,6 +1608,10 @@ class __$$CommentStateImplCopyWithImpl<$Res>
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
+      reelId: null == reelId
+          ? _value.reelId
+          : reelId // ignore: cast_nullable_to_non_nullable
+              as int,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1209,6 +1632,10 @@ class __$$CommentStateImplCopyWithImpl<$Res>
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as Comment?,
+      commentReel: freezed == commentReel
+          ? _value.commentReel
+          : commentReel // ignore: cast_nullable_to_non_nullable
+              as Comment?,
     ));
   }
 }
@@ -1222,11 +1649,13 @@ class _$CommentStateImpl implements _CommentState {
       this.loading = false,
       this.content = '',
       this.postId = 0,
+      this.reelId = 0,
       this.id = 0,
       this.isSuccess = false,
       this.errorMessage = '',
       final List<Comment> comments = const [],
-      this.comment})
+      this.comment,
+      this.commentReel})
       : _comments = comments;
 
   @override
@@ -1243,6 +1672,9 @@ class _$CommentStateImpl implements _CommentState {
   @override
   @JsonKey()
   final int postId;
+  @override
+  @JsonKey()
+  final int reelId;
   @override
   @JsonKey()
   final int id;
@@ -1263,10 +1695,12 @@ class _$CommentStateImpl implements _CommentState {
 
   @override
   final Comment? comment;
+  @override
+  final Comment? commentReel;
 
   @override
   String toString() {
-    return 'CommentState(status: $status, notification: $notification, loading: $loading, content: $content, postId: $postId, id: $id, isSuccess: $isSuccess, errorMessage: $errorMessage, comments: $comments, comment: $comment)';
+    return 'CommentState(status: $status, notification: $notification, loading: $loading, content: $content, postId: $postId, reelId: $reelId, id: $id, isSuccess: $isSuccess, errorMessage: $errorMessage, comments: $comments, comment: $comment, commentReel: $commentReel)';
   }
 
   @override
@@ -1280,13 +1714,16 @@ class _$CommentStateImpl implements _CommentState {
             (identical(other.loading, loading) || other.loading == loading) &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.reelId, reelId) || other.reelId == reelId) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.isSuccess, isSuccess) ||
                 other.isSuccess == isSuccess) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage) &&
             const DeepCollectionEquality().equals(other._comments, _comments) &&
-            (identical(other.comment, comment) || other.comment == comment));
+            (identical(other.comment, comment) || other.comment == comment) &&
+            (identical(other.commentReel, commentReel) ||
+                other.commentReel == commentReel));
   }
 
   @override
@@ -1297,11 +1734,13 @@ class _$CommentStateImpl implements _CommentState {
       loading,
       content,
       postId,
+      reelId,
       id,
       isSuccess,
       errorMessage,
       const DeepCollectionEquality().hash(_comments),
-      comment);
+      comment,
+      commentReel);
 
   /// Create a copy of CommentState
   /// with the given fields replaced by the non-null parameter values.
@@ -1319,11 +1758,13 @@ abstract class _CommentState implements CommentState {
       final bool loading,
       final String content,
       final int postId,
+      final int reelId,
       final int id,
       final bool isSuccess,
       final String errorMessage,
       final List<Comment> comments,
-      final Comment? comment}) = _$CommentStateImpl;
+      final Comment? comment,
+      final Comment? commentReel}) = _$CommentStateImpl;
 
   @override
   UIStatus get status;
@@ -1336,6 +1777,8 @@ abstract class _CommentState implements CommentState {
   @override
   int get postId;
   @override
+  int get reelId;
+  @override
   int get id;
   @override
   bool get isSuccess;
@@ -1345,6 +1788,8 @@ abstract class _CommentState implements CommentState {
   List<Comment> get comments;
   @override
   Comment? get comment;
+  @override
+  Comment? get commentReel;
 
   /// Create a copy of CommentState
   /// with the given fields replaced by the non-null parameter values.

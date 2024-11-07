@@ -7,6 +7,7 @@ class ReelState with _$ReelState {
       ReelNotification? notification,
       @Default(false) bool loading,
       @Default('') String title,
+      @Default(0) int reelId,
       @Default('') String video,
       @Default(false) bool isSuccess,
       @Default('') String errorMessage,

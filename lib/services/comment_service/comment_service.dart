@@ -30,6 +30,18 @@ class CommentService {
     }
   }
 
+  Future<dynamic> createCommentForReel(
+      int reelId, String token, Map<String, dynamic> data) async {
+    try {
+      final res = await dio.post('/comments/reel/$reelId',
+          data: data,
+          options: Options(headers: {'Authorization': 'Bearer $token'}));
+      return res;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
   Future<dynamic> likeComment(String token, int id) async {
     try {
       final res = await dio.put('/comments/like/$id',

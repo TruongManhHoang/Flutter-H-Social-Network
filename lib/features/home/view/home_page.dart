@@ -5,16 +5,19 @@ import 'package:boilerplate/features/comment/bloc/comment_bloc.dart';
 import 'package:boilerplate/features/comment/bloc/view/comment_page.dart';
 import 'package:boilerplate/features/home/bloc/home_bloc.dart';
 import 'package:boilerplate/features/home/hello.dart';
+import 'package:boilerplate/features/login/view/login_page.dart';
 import 'package:boilerplate/features/story/view/story_page.dart';
 import 'package:boilerplate/features/temp/home_bottom.dart';
 import 'package:boilerplate/features/temp/siderBar.dart';
 import 'package:boilerplate/injector/injector.dart';
+import 'package:boilerplate/router/app_router.dart';
 import 'package:boilerplate/services/cloudinary/cloudinary_serivce.dart';
 import 'package:chewie/chewie.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:video_player/video_player.dart';
+import 'package:go_router/go_router.dart';
 // import 'package:video_player_media_kit/video_player_media_kit.dart';
 
 class HomePage extends StatefulWidget {
@@ -98,32 +101,36 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Color.fromARGB(255, 47, 141, 212),
-        flexibleSpace: const Padding(
-            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-            child: Row(
-              // crossAxisAlignment: CrossAxisAlignment.,
-              children: [
-                Text(
-                  'TMHNetWork',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
-                ),
-                Spacer(),
-                Icon(
-                  Icons.favorite,
-                  color: Colors.white,
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Icon(
-                  Icons.message_outlined,
-                  color: Colors.white,
-                  size: 30,
-                ),
-              ],
-            )));
+      automaticallyImplyLeading: false,
+      backgroundColor: const Color.fromARGB(255, 47, 141, 212),
+      flexibleSpace: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+        child: Row(
+          children: [
+            const Text(
+              'TMHNetWork',
+              style: TextStyle(fontSize: 20, color: Colors.white),
+            ),
+            const Spacer(),
+            const Icon(
+              Icons.favorite,
+              color: Colors.white,
+            ),
+            const SizedBox(width: 20),
+            IconButton(
+              onPressed: () {
+                context.push(AppRouter.chatPath);
+              },
+              icon: const Icon(
+                Icons.message_outlined,
+                color: Colors.white,
+                size: 30,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   @override

@@ -1,6 +1,9 @@
+import 'package:boilerplate/features/chat/view/chat_page.dart';
 import 'package:boilerplate/features/comment/bloc/view/comment_page.dart';
-import 'package:boilerplate/features/home/home_page.dart';
+import 'package:boilerplate/features/home/view/home_page.dart';
 import 'package:boilerplate/features/login/view/login_page.dart';
+import 'package:boilerplate/features/reel/view/reel_page.dart';
+import 'package:boilerplate/features/reel/view/videoplayerwidget.dart';
 import 'package:boilerplate/features/setting/setting_page.dart';
 import 'package:boilerplate/features/story/view/story_page.dart';
 import 'package:boilerplate/features/user/view/client_user_page.dart';
@@ -29,6 +32,15 @@ class AppRouter {
 
   static const String userName = 'user';
   static const String userPath = '/user';
+
+  static const String reelName = 'reel';
+  static const String reelPath = '/reel';
+
+  static const String reel1Name = 'reel1';
+  static const String reel1Path = '/reel1';
+
+  static const String chatName = 'chat';
+  static const String chatPath = '/chat';
 
   static const String registerUserName = 'registerUser';
   static const String registerUserPath = '/registerUser';
@@ -82,11 +94,22 @@ class AppRouter {
         path: findUserPath,
         builder: (context, state) => const FindUserPage(),
       ),
+      GoRoute(
+        name: reel1Name,
+        path: reel1Path,
+        builder: (context, state) => const ReelPage(),
+      ),
+
       // GoRoute(
-      //   name: clientUserName,
-      //   path: clientUserPath,
-      //   builder: (context, state) => const ClientUserPage(),
-      // )
+      //   name: reelName,
+      //   path: reelPath,
+      //   builder: (context, state) => Videoplayerwidget(),
+      // ),
+      GoRoute(
+        name: chatName,
+        path: chatPath,
+        builder: (context, state) => ChatPage(),
+      )
     ],
   );
 }

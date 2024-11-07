@@ -456,188 +456,183 @@ class __BodyState extends State<_Body> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: BlocBuilder<UserBloc, UserState>(
-        builder: (context, state) {
-          if (state.clientUser != null) {
-            final user = state.clientUser!;
-            return Column(
-              children: [
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: [
-                        const Icon(
-                          Icons.account_circle,
-                          color: Colors.grey,
-                          size: 80,
-                        ),
-                        Text('${user.firstName} ${user.lastName}'),
-                      ],
-                    ),
-                    Column(children: [Text('0'), Text('posts')]),
-                    Column(children: [
-                      Text('${user.followers.length}'),
-                      Text('followers')
-                    ]),
-                    Column(children: [
-                      Text('${user.followings.length}'),
-                      Text('following')
-                    ]),
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Row(
+    return BlocBuilder<UserBloc, UserState>(
+      builder: (context, state) {
+        if (state.clientUser != null) {
+          final user = state.clientUser!;
+          return Column(
+            children: [
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
                     children: [
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  isFollowing ? Colors.grey : Colors.blue,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8))),
-                          onPressed: () {
-                            context
-                                .read<UserBloc>()
-                                .add(UserEvent.changeUserId(user.id));
-                            context
-                                .read<UserBloc>()
-                                .add(UserEvent.followUser());
-                          },
-                          child: Text(
-                            'Follow',
-                            style: TextStyle(color: Colors.white),
-                          ),
+                      const Icon(
+                        Icons.account_circle,
+                        color: Colors.grey,
+                        size: 80,
+                      ),
+                      Text('${user.firstName} ${user.lastName}'),
+                    ],
+                  ),
+                  Column(children: [Text('0'), Text('posts')]),
+                  Column(children: [
+                    Text('${user.followers.length}'),
+                    Text('followers')
+                  ]),
+                  Column(children: [
+                    Text('${user.followings.length}'),
+                    Text('following')
+                  ]),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                isFollowing ? Colors.grey : Colors.blue,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        onPressed: () {
+                          context
+                              .read<UserBloc>()
+                              .add(UserEvent.changeUserId(user.id));
+                          context.read<UserBloc>().add(UserEvent.followUser());
+                        },
+                        child: Text(
+                          'Follow',
+                          style: TextStyle(color: Colors.white),
                         ),
                       ),
-                      SizedBox(
-                        width: 6,
+                    ),
+                    SizedBox(
+                      width: 6,
+                    ),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        onPressed: () {},
+                        child: Text(
+                          'Message',
+                        ),
                       ),
-                      Expanded(
-                        child: ElevatedButton(
+                    ),
+                    SizedBox(
+                      width: 6,
+                    ),
+                    Expanded(
+                      child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(8))),
                           onPressed: () {},
-                          child: Text(
-                            'Message',
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 6,
-                      ),
-                      Expanded(
-                        child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8))),
-                            onPressed: () {},
-                            child: Text('Subcribe')),
-                      )
-                    ],
-                  ),
+                          child: Text('Subcribe')),
+                    )
+                  ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                DefaultTabController(
-                    length: 3,
-                    child: Column(children: [
-                      const TabBar(
-                        indicatorColor: Colors.black,
-                        labelColor: Colors.black,
-                        unselectedLabelColor: Colors.grey,
-                        tabs: [
-                          Tab(icon: Icon(Icons.grid_on), text: 'Posts'),
-                          Tab(icon: Icon(Icons.video_library), text: 'Tagged'),
-                          Tab(icon: Icon(Icons.bookmark_border), text: 'Saved'),
-                        ],
-                      ),
-                      SizedBox(
-                          height: 300,
-                          child: TabBarView(children: [
-                            Container(
-                                height: 600,
-                                child: BlocBuilder<HomeBloc, HomeState>(
-                                    builder: (context, state) {
-                                  if (state.loading) {
-                                    return Center(
-                                      child: CircularProgressIndicator(),
-                                    );
-                                  } else if (state.isSuccess) {
-                                    return GridView.builder(
-                                      physics: BouncingScrollPhysics(),
-                                      gridDelegate:
-                                          SliverGridDelegateWithFixedCrossAxisCount(
-                                              crossAxisCount: 3,
-                                              childAspectRatio: 0.65),
-                                      itemCount: state.getPostByUserId.length,
-                                      itemBuilder: (context, index) {
-                                        final post =
-                                            state.getPostByUserId[index];
-                                        return GestureDetector(
-                                          onTap: () {
-                                            showPost(post);
-                                          },
-                                          child: Image.network(
-                                            post.image,
-                                            fit: BoxFit.cover,
-                                            width: double.infinity,
-                                            height: 100,
-                                          ),
-                                        );
-                                      },
-                                    );
-                                  } else {
-                                    return Center(
-                                        child: Text('Error loading posts'));
-                                  }
-                                })),
-                            Center(child: Text('Tagged Content')),
-                            Container(
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              DefaultTabController(
+                  length: 3,
+                  child: Column(children: [
+                    const TabBar(
+                      indicatorColor: Colors.black,
+                      labelColor: Colors.black,
+                      unselectedLabelColor: Colors.grey,
+                      tabs: [
+                        Tab(icon: Icon(Icons.grid_on), text: 'Posts'),
+                        Tab(icon: Icon(Icons.video_library), text: 'Tagged'),
+                        Tab(icon: Icon(Icons.bookmark_border), text: 'Saved'),
+                      ],
+                    ),
+                    SizedBox(
+                        height: 300,
+                        child: TabBarView(children: [
+                          Container(
                               height: 600,
-                              child: GridView.builder(
-                                physics: BouncingScrollPhysics(),
-                                gridDelegate:
-                                    SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 3,
-                                  childAspectRatio: 0.65,
-                                ),
-                                itemCount: user.savedPosts.length,
-                                itemBuilder: (context, index) {
-                                  final post = user.savedPosts[index];
-                                  return GestureDetector(
-                                    onTap: () {
-                                      showSavePost(post);
-                                    },
-                                    child: Image.network(
-                                      post.image,
-                                      fit: BoxFit.cover,
-                                      width: double.infinity,
-                                      height: 100,
-                                    ),
+                              child: BlocBuilder<HomeBloc, HomeState>(
+                                  builder: (context, state) {
+                                if (state.loading) {
+                                  return Center(
+                                    child: CircularProgressIndicator(),
                                   );
-                                },
+                                } else if (state.isSuccess) {
+                                  return GridView.builder(
+                                    physics: BouncingScrollPhysics(),
+                                    gridDelegate:
+                                        SliverGridDelegateWithFixedCrossAxisCount(
+                                            crossAxisCount: 3,
+                                            childAspectRatio: 0.65),
+                                    itemCount: state.getPostByUserId.length,
+                                    itemBuilder: (context, index) {
+                                      final post = state.getPostByUserId[index];
+                                      return GestureDetector(
+                                        onTap: () {
+                                          showPost(post);
+                                        },
+                                        child: Image.network(
+                                          post.image,
+                                          fit: BoxFit.cover,
+                                          width: double.infinity,
+                                          height: 100,
+                                        ),
+                                      );
+                                    },
+                                  );
+                                } else {
+                                  return Center(
+                                      child: Text('Error loading posts'));
+                                }
+                              })),
+                          Center(child: Text('Tagged Content')),
+                          Container(
+                            height: 600,
+                            child: GridView.builder(
+                              physics: BouncingScrollPhysics(),
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
+                                childAspectRatio: 0.65,
                               ),
+                              itemCount: user.savedPosts.length,
+                              itemBuilder: (context, index) {
+                                final post = user.savedPosts[index];
+                                return GestureDetector(
+                                  onTap: () {
+                                    showSavePost(post);
+                                  },
+                                  child: Image.network(
+                                    post.image,
+                                    fit: BoxFit.cover,
+                                    width: double.infinity,
+                                    height: 100,
+                                  ),
+                                );
+                              },
                             ),
-                          ]))
-                    ]))
-              ],
-            );
-          } else {
-            return Center(
-              child: Text('Không tìm thấy người dùng.'),
-            );
-          }
-        },
-      ),
+                          ),
+                        ]))
+                  ]))
+            ],
+          );
+        } else {
+          return Center(
+            child: Text('Không tìm thấy người dùng.'),
+          );
+        }
+      },
     );
   }
 }

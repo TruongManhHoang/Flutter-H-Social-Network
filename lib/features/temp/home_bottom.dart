@@ -60,7 +60,7 @@ class HomeBottom extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {
-                    // context.push(AppRouter.cartPath);
+                    context.push(AppRouter.reel1Path);
                   },
                   icon: const Icon(Icons.shop, color: Colors.white),
                 ),

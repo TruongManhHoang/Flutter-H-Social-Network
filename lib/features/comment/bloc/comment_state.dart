@@ -8,9 +8,11 @@ class CommentState with _$CommentState {
       @Default(false) bool loading,
       @Default('') String content,
       @Default(0) int postId,
+      @Default(0) int reelId,
       @Default(0) int id,
       @Default(false) bool isSuccess,
       @Default('') String errorMessage,
       @Default([]) List<Comment> comments,
-      Comment? comment}) = _CommentState;
+      Comment? comment,
+      Comment? commentReel}) = _CommentState;
 }

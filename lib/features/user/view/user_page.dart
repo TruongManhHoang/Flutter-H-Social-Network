@@ -278,12 +278,14 @@ class __BodyState extends State<_Body> {
                   SizedBox(
                     height: 10,
                   ),
-                  Image.network(
-                    post.image,
-                    fit: BoxFit.cover,
-                    width: 600,
-                    height: 500,
-                  ),
+                  if (post.image.isNotEmpty)
+                    Image.network(
+                      post.image,
+                      fit: BoxFit.cover,
+                      width: 600,
+                      height: 500,
+                    ),
+                  if (post.video.isNotEmpty) const SizedBox.shrink(),
                   const SizedBox(height: 8),
                   Row(
                     children: [
@@ -575,12 +577,18 @@ class __BodyState extends State<_Body> {
                           color: Colors.grey,
                           size: 80,
                         ),
-                        Text('${user.firstName} ${user.lastName}'),
+                        Text('${user.lastName} ${user.firstName}'),
                       ],
                     ),
-                    Column(children: const [Text('0'), Text('posts')]),
-                    Column(children: const [Text('0'), Text('followers')]),
-                    Column(children: const [Text('0'), Text('following')]),
+                    Column(children: [Text('0'), Text('posts')]),
+                    Column(children: [
+                      Text('${user.followers.length}'),
+                      Text('followers')
+                    ]),
+                    Column(children: [
+                      Text('${user.followings.length}'),
+                      Text('following')
+                    ]),
                   ],
                 ),
                 Padding(
@@ -615,8 +623,8 @@ class __BodyState extends State<_Body> {
                         unselectedLabelColor: Colors.grey,
                         tabs: [
                           Tab(icon: Icon(Icons.grid_on), text: 'Posts'),
+                          Tab(icon: Icon(Icons.video_library), text: 'Reel'),
                           Tab(icon: Icon(Icons.bookmark_border), text: 'Saved'),
-                          Tab(icon: Icon(Icons.tag), text: 'Tagged'),
                         ],
                       ),
                       SizedBox(
@@ -659,6 +667,9 @@ class __BodyState extends State<_Body> {
                                         child: Text('Error loading posts'));
                                   }
                                 })),
+                            Center(
+                              child: Text('Tagged Content'),
+                            ),
                             Container(
                               height: 600,
                               child: GridView.builder(
@@ -685,7 +696,6 @@ class __BodyState extends State<_Body> {
                                 },
                               ),
                             ),
-                            Center(child: Text('Tagged Content')),
                           ],
                         ),
                       ),

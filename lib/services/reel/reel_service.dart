@@ -28,11 +28,9 @@ class ReelService {
     }
   }
 
-  Future<dynamic> updateProfileUser(
-      String token, Map<String, dynamic> data) async {
+  Future<dynamic> likeReel(String token, int reelId) async {
     try {
-      final res = await dio.put('/users',
-          data: data,
+      final res = await dio.put('/reels/like/$reelId',
           options: Options(headers: {'Authorization': 'Bearer $token'}));
       return res;
     } catch (e) {
@@ -41,9 +39,9 @@ class ReelService {
     }
   }
 
-  Future<dynamic> getProfileUser(String token) async {
+  Future<dynamic> deleteReel(String token, int reelId) async {
     try {
-      final res = await dio.get('/users/profile',
+      final res = await dio.delete('/reels/$reelId',
           options: Options(headers: {'Authorization': 'Bearer $token'}));
       return res;
     } catch (e) {
