@@ -1,5 +1,6 @@
 import 'package:boilerplate/features/chat/view/chat_page.dart';
-import 'package:boilerplate/features/comment/bloc/view/comment_page.dart';
+import 'package:boilerplate/features/comment/view/comment_page.dart';
+
 import 'package:boilerplate/features/home/view/home_page.dart';
 import 'package:boilerplate/features/login/view/login_page.dart';
 import 'package:boilerplate/features/reel/view/reel_page.dart';

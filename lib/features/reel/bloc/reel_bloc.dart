@@ -146,7 +146,7 @@ class ReelBloc extends Bloc<ReelEvent, ReelState> {
   void _onLikeReel(_likeReel event, Emitter<ReelState> emit) {
     try {
       String token = _localStorageService.getString(key: AppKeys.token) ?? '';
-      dynamic response = _reelService.deleteReel(token, state.reelId);
+      dynamic response = _reelService.likeReel(token, state.reelId);
     } catch (e) {
       emit(state.copyWith(
           loading: false,

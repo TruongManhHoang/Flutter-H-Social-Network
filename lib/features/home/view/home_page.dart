@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:boilerplate/features/comment/bloc/comment_bloc.dart';
-import 'package:boilerplate/features/comment/bloc/view/comment_page.dart';
 import 'package:boilerplate/features/home/bloc/home_bloc.dart';
 import 'package:boilerplate/features/home/hello.dart';
 import 'package:boilerplate/features/login/view/login_page.dart';

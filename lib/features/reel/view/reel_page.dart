@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:boilerplate/features/comment/bloc/comment_bloc.dart';
-import 'package:boilerplate/features/comment/bloc/view/comment_page.dart';
 import 'package:boilerplate/features/home/bloc/home_bloc.dart';
 import 'package:boilerplate/features/home/hello.dart';
 import 'package:boilerplate/features/reel/bloc/reel_bloc.dart';
@@ -433,11 +432,11 @@ class __BodyState extends State<_Body> {
                               IconButton(
                                   onPressed: () {
                                     context
-                                        .read<HomeBloc>()
-                                        .add(HomeEvent.changeId(reel.id));
+                                        .read<ReelBloc>()
+                                        .add(ReelEvent.changeReelId(reel.id));
                                     context
-                                        .read<HomeBloc>()
-                                        .add(HomeEvent.deletePost());
+                                        .read<ReelBloc>()
+                                        .add(ReelEvent.deleteReel());
                                   },
                                   icon: Icon(Icons.delete))
                             ],
@@ -495,22 +494,6 @@ class __BodyState extends State<_Body> {
                                         showComment ? Colors.blue : Colors.grey,
                                   )),
                               Spacer(),
-
-                              IconButton(
-                                  onPressed: () {
-                                    // context
-                                    //     .read<HomeBloc>()
-                                    //     .add(HomeEvent.changeId(post.id));
-                                    // context
-                                    //     .read<HomeBloc>()
-                                    //     .add(HomeEvent.savePost());
-                                  },
-                                  icon: Icon(
-                                    Icons.save_rounded,
-                                    color: Colors.grey,
-                                  )),
-
-                              // Chuyển thành danh sách các Widget
                             ],
                           ),
                           if (showComment)
@@ -569,17 +552,17 @@ class __BodyState extends State<_Body> {
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(20))),
                               onChanged: (value) {
-                                // context
-                                //     .read<CommentBloc>()
-                                //     .add(CommentEvent.selectPostId(post.id));
-                                // context
-                                //     .read<CommentBloc>()
-                                //     .add(CommentEvent.selectContent(value));
+                                context
+                                    .read<CommentBloc>()
+                                    .add(CommentEvent.selectReelId(reel.id));
+                                context
+                                    .read<CommentBloc>()
+                                    .add(CommentEvent.selectContent(value));
                               },
                               onFieldSubmitted: (value) {
-                                // context
-                                //     .read<CommentBloc>()
-                                //     .add(CommentEvent.newComment());
+                                context
+                                    .read<CommentBloc>()
+                                    .add(CommentEvent.newCommentForReel());
                               },
                             ),
                           ),

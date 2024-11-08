@@ -171,8 +171,8 @@ class CommentBloc extends Bloc<CommentEvent, CommentState> {
           liked: []);
       String token = _localStorageService.getString(key: AppKeys.token) ?? '';
       dynamic payload = comment.toJson();
-      dynamic response =
-          await _commentService.createComment(state.reelId, token, payload);
+      dynamic response = await _commentService.createCommentForReel(
+          state.reelId, token, payload);
       emit(state.copyWith(
           isSuccess: true,
           commentReel: comment,
