@@ -22,6 +22,8 @@ mixin _$ReelEvent {
     required TResult Function() newReel,
     required TResult Function() deleteReel,
     required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
     required TResult Function(String title) changeTitle,
     required TResult Function(String video) changeVideo,
     required TResult Function(int reelId) changeReelId,
@@ -33,6 +35,8 @@ mixin _$ReelEvent {
     TResult? Function()? newReel,
     TResult? Function()? deleteReel,
     TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
     TResult? Function(String title)? changeTitle,
     TResult? Function(String video)? changeVideo,
     TResult? Function(int reelId)? changeReelId,
@@ -44,6 +48,8 @@ mixin _$ReelEvent {
     TResult Function()? newReel,
     TResult Function()? deleteReel,
     TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
     TResult Function(String title)? changeTitle,
     TResult Function(String video)? changeVideo,
     TResult Function(int reelId)? changeReelId,
@@ -56,6 +62,8 @@ mixin _$ReelEvent {
     required TResult Function(_newReel value) newReel,
     required TResult Function(_deleteReel value) deleteReel,
     required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
     required TResult Function(_ChangeTitle value) changeTitle,
     required TResult Function(_ChangeVideo value) changeVideo,
     required TResult Function(_ChangeReelId value) changeReelId,
@@ -67,6 +75,8 @@ mixin _$ReelEvent {
     TResult? Function(_newReel value)? newReel,
     TResult? Function(_deleteReel value)? deleteReel,
     TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
     TResult? Function(_ChangeTitle value)? changeTitle,
     TResult? Function(_ChangeVideo value)? changeVideo,
     TResult? Function(_ChangeReelId value)? changeReelId,
@@ -78,6 +88,8 @@ mixin _$ReelEvent {
     TResult Function(_newReel value)? newReel,
     TResult Function(_deleteReel value)? deleteReel,
     TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
     TResult Function(_ChangeTitle value)? changeTitle,
     TResult Function(_ChangeVideo value)? changeVideo,
     TResult Function(_ChangeReelId value)? changeReelId,
@@ -151,6 +163,8 @@ class _$getReelImpl implements _getReel {
     required TResult Function() newReel,
     required TResult Function() deleteReel,
     required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
     required TResult Function(String title) changeTitle,
     required TResult Function(String video) changeVideo,
     required TResult Function(int reelId) changeReelId,
@@ -165,6 +179,8 @@ class _$getReelImpl implements _getReel {
     TResult? Function()? newReel,
     TResult? Function()? deleteReel,
     TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
     TResult? Function(String title)? changeTitle,
     TResult? Function(String video)? changeVideo,
     TResult? Function(int reelId)? changeReelId,
@@ -179,6 +195,8 @@ class _$getReelImpl implements _getReel {
     TResult Function()? newReel,
     TResult Function()? deleteReel,
     TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
     TResult Function(String title)? changeTitle,
     TResult Function(String video)? changeVideo,
     TResult Function(int reelId)? changeReelId,
@@ -197,6 +215,8 @@ class _$getReelImpl implements _getReel {
     required TResult Function(_newReel value) newReel,
     required TResult Function(_deleteReel value) deleteReel,
     required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
     required TResult Function(_ChangeTitle value) changeTitle,
     required TResult Function(_ChangeVideo value) changeVideo,
     required TResult Function(_ChangeReelId value) changeReelId,
@@ -211,6 +231,8 @@ class _$getReelImpl implements _getReel {
     TResult? Function(_newReel value)? newReel,
     TResult? Function(_deleteReel value)? deleteReel,
     TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
     TResult? Function(_ChangeTitle value)? changeTitle,
     TResult? Function(_ChangeVideo value)? changeVideo,
     TResult? Function(_ChangeReelId value)? changeReelId,
@@ -225,6 +247,8 @@ class _$getReelImpl implements _getReel {
     TResult Function(_newReel value)? newReel,
     TResult Function(_deleteReel value)? deleteReel,
     TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
     TResult Function(_ChangeTitle value)? changeTitle,
     TResult Function(_ChangeVideo value)? changeVideo,
     TResult Function(_ChangeReelId value)? changeReelId,
@@ -286,6 +310,8 @@ class _$newReelImpl implements _newReel {
     required TResult Function() newReel,
     required TResult Function() deleteReel,
     required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
     required TResult Function(String title) changeTitle,
     required TResult Function(String video) changeVideo,
     required TResult Function(int reelId) changeReelId,
@@ -300,6 +326,8 @@ class _$newReelImpl implements _newReel {
     TResult? Function()? newReel,
     TResult? Function()? deleteReel,
     TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
     TResult? Function(String title)? changeTitle,
     TResult? Function(String video)? changeVideo,
     TResult? Function(int reelId)? changeReelId,
@@ -314,6 +342,8 @@ class _$newReelImpl implements _newReel {
     TResult Function()? newReel,
     TResult Function()? deleteReel,
     TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
     TResult Function(String title)? changeTitle,
     TResult Function(String video)? changeVideo,
     TResult Function(int reelId)? changeReelId,
@@ -332,6 +362,8 @@ class _$newReelImpl implements _newReel {
     required TResult Function(_newReel value) newReel,
     required TResult Function(_deleteReel value) deleteReel,
     required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
     required TResult Function(_ChangeTitle value) changeTitle,
     required TResult Function(_ChangeVideo value) changeVideo,
     required TResult Function(_ChangeReelId value) changeReelId,
@@ -346,6 +378,8 @@ class _$newReelImpl implements _newReel {
     TResult? Function(_newReel value)? newReel,
     TResult? Function(_deleteReel value)? deleteReel,
     TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
     TResult? Function(_ChangeTitle value)? changeTitle,
     TResult? Function(_ChangeVideo value)? changeVideo,
     TResult? Function(_ChangeReelId value)? changeReelId,
@@ -360,6 +394,8 @@ class _$newReelImpl implements _newReel {
     TResult Function(_newReel value)? newReel,
     TResult Function(_deleteReel value)? deleteReel,
     TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
     TResult Function(_ChangeTitle value)? changeTitle,
     TResult Function(_ChangeVideo value)? changeVideo,
     TResult Function(_ChangeReelId value)? changeReelId,
@@ -421,6 +457,8 @@ class _$deleteReelImpl implements _deleteReel {
     required TResult Function() newReel,
     required TResult Function() deleteReel,
     required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
     required TResult Function(String title) changeTitle,
     required TResult Function(String video) changeVideo,
     required TResult Function(int reelId) changeReelId,
@@ -435,6 +473,8 @@ class _$deleteReelImpl implements _deleteReel {
     TResult? Function()? newReel,
     TResult? Function()? deleteReel,
     TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
     TResult? Function(String title)? changeTitle,
     TResult? Function(String video)? changeVideo,
     TResult? Function(int reelId)? changeReelId,
@@ -449,6 +489,8 @@ class _$deleteReelImpl implements _deleteReel {
     TResult Function()? newReel,
     TResult Function()? deleteReel,
     TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
     TResult Function(String title)? changeTitle,
     TResult Function(String video)? changeVideo,
     TResult Function(int reelId)? changeReelId,
@@ -467,6 +509,8 @@ class _$deleteReelImpl implements _deleteReel {
     required TResult Function(_newReel value) newReel,
     required TResult Function(_deleteReel value) deleteReel,
     required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
     required TResult Function(_ChangeTitle value) changeTitle,
     required TResult Function(_ChangeVideo value) changeVideo,
     required TResult Function(_ChangeReelId value) changeReelId,
@@ -481,6 +525,8 @@ class _$deleteReelImpl implements _deleteReel {
     TResult? Function(_newReel value)? newReel,
     TResult? Function(_deleteReel value)? deleteReel,
     TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
     TResult? Function(_ChangeTitle value)? changeTitle,
     TResult? Function(_ChangeVideo value)? changeVideo,
     TResult? Function(_ChangeReelId value)? changeReelId,
@@ -495,6 +541,8 @@ class _$deleteReelImpl implements _deleteReel {
     TResult Function(_newReel value)? newReel,
     TResult Function(_deleteReel value)? deleteReel,
     TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
     TResult Function(_ChangeTitle value)? changeTitle,
     TResult Function(_ChangeVideo value)? changeVideo,
     TResult Function(_ChangeReelId value)? changeReelId,
@@ -556,6 +604,8 @@ class _$likeReelImpl implements _likeReel {
     required TResult Function() newReel,
     required TResult Function() deleteReel,
     required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
     required TResult Function(String title) changeTitle,
     required TResult Function(String video) changeVideo,
     required TResult Function(int reelId) changeReelId,
@@ -570,6 +620,8 @@ class _$likeReelImpl implements _likeReel {
     TResult? Function()? newReel,
     TResult? Function()? deleteReel,
     TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
     TResult? Function(String title)? changeTitle,
     TResult? Function(String video)? changeVideo,
     TResult? Function(int reelId)? changeReelId,
@@ -584,6 +636,8 @@ class _$likeReelImpl implements _likeReel {
     TResult Function()? newReel,
     TResult Function()? deleteReel,
     TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
     TResult Function(String title)? changeTitle,
     TResult Function(String video)? changeVideo,
     TResult Function(int reelId)? changeReelId,
@@ -602,6 +656,8 @@ class _$likeReelImpl implements _likeReel {
     required TResult Function(_newReel value) newReel,
     required TResult Function(_deleteReel value) deleteReel,
     required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
     required TResult Function(_ChangeTitle value) changeTitle,
     required TResult Function(_ChangeVideo value) changeVideo,
     required TResult Function(_ChangeReelId value) changeReelId,
@@ -616,6 +672,8 @@ class _$likeReelImpl implements _likeReel {
     TResult? Function(_newReel value)? newReel,
     TResult? Function(_deleteReel value)? deleteReel,
     TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
     TResult? Function(_ChangeTitle value)? changeTitle,
     TResult? Function(_ChangeVideo value)? changeVideo,
     TResult? Function(_ChangeReelId value)? changeReelId,
@@ -630,6 +688,8 @@ class _$likeReelImpl implements _likeReel {
     TResult Function(_newReel value)? newReel,
     TResult Function(_deleteReel value)? deleteReel,
     TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
     TResult Function(_ChangeTitle value)? changeTitle,
     TResult Function(_ChangeVideo value)? changeVideo,
     TResult Function(_ChangeReelId value)? changeReelId,
@@ -644,6 +704,300 @@ class _$likeReelImpl implements _likeReel {
 
 abstract class _likeReel implements ReelEvent {
   const factory _likeReel() = _$likeReelImpl;
+}
+
+/// @nodoc
+abstract class _$$getReelByUserImplCopyWith<$Res> {
+  factory _$$getReelByUserImplCopyWith(
+          _$getReelByUserImpl value, $Res Function(_$getReelByUserImpl) then) =
+      __$$getReelByUserImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$getReelByUserImplCopyWithImpl<$Res>
+    extends _$ReelEventCopyWithImpl<$Res, _$getReelByUserImpl>
+    implements _$$getReelByUserImplCopyWith<$Res> {
+  __$$getReelByUserImplCopyWithImpl(
+      _$getReelByUserImpl _value, $Res Function(_$getReelByUserImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ReelEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$getReelByUserImpl implements _getReelByUser {
+  const _$getReelByUserImpl();
+
+  @override
+  String toString() {
+    return 'ReelEvent.getReelByUser()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$getReelByUserImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getReel,
+    required TResult Function() newReel,
+    required TResult Function() deleteReel,
+    required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
+    required TResult Function(String title) changeTitle,
+    required TResult Function(String video) changeVideo,
+    required TResult Function(int reelId) changeReelId,
+  }) {
+    return getReelByUser();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getReel,
+    TResult? Function()? newReel,
+    TResult? Function()? deleteReel,
+    TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
+    TResult? Function(String title)? changeTitle,
+    TResult? Function(String video)? changeVideo,
+    TResult? Function(int reelId)? changeReelId,
+  }) {
+    return getReelByUser?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getReel,
+    TResult Function()? newReel,
+    TResult Function()? deleteReel,
+    TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
+    TResult Function(String title)? changeTitle,
+    TResult Function(String video)? changeVideo,
+    TResult Function(int reelId)? changeReelId,
+    required TResult orElse(),
+  }) {
+    if (getReelByUser != null) {
+      return getReelByUser();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_getReel value) getReel,
+    required TResult Function(_newReel value) newReel,
+    required TResult Function(_deleteReel value) deleteReel,
+    required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
+    required TResult Function(_ChangeTitle value) changeTitle,
+    required TResult Function(_ChangeVideo value) changeVideo,
+    required TResult Function(_ChangeReelId value) changeReelId,
+  }) {
+    return getReelByUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_getReel value)? getReel,
+    TResult? Function(_newReel value)? newReel,
+    TResult? Function(_deleteReel value)? deleteReel,
+    TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
+    TResult? Function(_ChangeTitle value)? changeTitle,
+    TResult? Function(_ChangeVideo value)? changeVideo,
+    TResult? Function(_ChangeReelId value)? changeReelId,
+  }) {
+    return getReelByUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_getReel value)? getReel,
+    TResult Function(_newReel value)? newReel,
+    TResult Function(_deleteReel value)? deleteReel,
+    TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
+    TResult Function(_ChangeTitle value)? changeTitle,
+    TResult Function(_ChangeVideo value)? changeVideo,
+    TResult Function(_ChangeReelId value)? changeReelId,
+    required TResult orElse(),
+  }) {
+    if (getReelByUser != null) {
+      return getReelByUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _getReelByUser implements ReelEvent {
+  const factory _getReelByUser() = _$getReelByUserImpl;
+}
+
+/// @nodoc
+abstract class _$$getReelByUserIdImplCopyWith<$Res> {
+  factory _$$getReelByUserIdImplCopyWith(_$getReelByUserIdImpl value,
+          $Res Function(_$getReelByUserIdImpl) then) =
+      __$$getReelByUserIdImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$getReelByUserIdImplCopyWithImpl<$Res>
+    extends _$ReelEventCopyWithImpl<$Res, _$getReelByUserIdImpl>
+    implements _$$getReelByUserIdImplCopyWith<$Res> {
+  __$$getReelByUserIdImplCopyWithImpl(
+      _$getReelByUserIdImpl _value, $Res Function(_$getReelByUserIdImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ReelEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$getReelByUserIdImpl implements _getReelByUserId {
+  const _$getReelByUserIdImpl();
+
+  @override
+  String toString() {
+    return 'ReelEvent.getReelByUserId()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$getReelByUserIdImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getReel,
+    required TResult Function() newReel,
+    required TResult Function() deleteReel,
+    required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
+    required TResult Function(String title) changeTitle,
+    required TResult Function(String video) changeVideo,
+    required TResult Function(int reelId) changeReelId,
+  }) {
+    return getReelByUserId();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getReel,
+    TResult? Function()? newReel,
+    TResult? Function()? deleteReel,
+    TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
+    TResult? Function(String title)? changeTitle,
+    TResult? Function(String video)? changeVideo,
+    TResult? Function(int reelId)? changeReelId,
+  }) {
+    return getReelByUserId?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getReel,
+    TResult Function()? newReel,
+    TResult Function()? deleteReel,
+    TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
+    TResult Function(String title)? changeTitle,
+    TResult Function(String video)? changeVideo,
+    TResult Function(int reelId)? changeReelId,
+    required TResult orElse(),
+  }) {
+    if (getReelByUserId != null) {
+      return getReelByUserId();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_getReel value) getReel,
+    required TResult Function(_newReel value) newReel,
+    required TResult Function(_deleteReel value) deleteReel,
+    required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
+    required TResult Function(_ChangeTitle value) changeTitle,
+    required TResult Function(_ChangeVideo value) changeVideo,
+    required TResult Function(_ChangeReelId value) changeReelId,
+  }) {
+    return getReelByUserId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_getReel value)? getReel,
+    TResult? Function(_newReel value)? newReel,
+    TResult? Function(_deleteReel value)? deleteReel,
+    TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
+    TResult? Function(_ChangeTitle value)? changeTitle,
+    TResult? Function(_ChangeVideo value)? changeVideo,
+    TResult? Function(_ChangeReelId value)? changeReelId,
+  }) {
+    return getReelByUserId?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_getReel value)? getReel,
+    TResult Function(_newReel value)? newReel,
+    TResult Function(_deleteReel value)? deleteReel,
+    TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
+    TResult Function(_ChangeTitle value)? changeTitle,
+    TResult Function(_ChangeVideo value)? changeVideo,
+    TResult Function(_ChangeReelId value)? changeReelId,
+    required TResult orElse(),
+  }) {
+    if (getReelByUserId != null) {
+      return getReelByUserId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _getReelByUserId implements ReelEvent {
+  const factory _getReelByUserId() = _$getReelByUserIdImpl;
 }
 
 /// @nodoc
@@ -718,6 +1072,8 @@ class _$ChangeTitleImpl implements _ChangeTitle {
     required TResult Function() newReel,
     required TResult Function() deleteReel,
     required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
     required TResult Function(String title) changeTitle,
     required TResult Function(String video) changeVideo,
     required TResult Function(int reelId) changeReelId,
@@ -732,6 +1088,8 @@ class _$ChangeTitleImpl implements _ChangeTitle {
     TResult? Function()? newReel,
     TResult? Function()? deleteReel,
     TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
     TResult? Function(String title)? changeTitle,
     TResult? Function(String video)? changeVideo,
     TResult? Function(int reelId)? changeReelId,
@@ -746,6 +1104,8 @@ class _$ChangeTitleImpl implements _ChangeTitle {
     TResult Function()? newReel,
     TResult Function()? deleteReel,
     TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
     TResult Function(String title)? changeTitle,
     TResult Function(String video)? changeVideo,
     TResult Function(int reelId)? changeReelId,
@@ -764,6 +1124,8 @@ class _$ChangeTitleImpl implements _ChangeTitle {
     required TResult Function(_newReel value) newReel,
     required TResult Function(_deleteReel value) deleteReel,
     required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
     required TResult Function(_ChangeTitle value) changeTitle,
     required TResult Function(_ChangeVideo value) changeVideo,
     required TResult Function(_ChangeReelId value) changeReelId,
@@ -778,6 +1140,8 @@ class _$ChangeTitleImpl implements _ChangeTitle {
     TResult? Function(_newReel value)? newReel,
     TResult? Function(_deleteReel value)? deleteReel,
     TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
     TResult? Function(_ChangeTitle value)? changeTitle,
     TResult? Function(_ChangeVideo value)? changeVideo,
     TResult? Function(_ChangeReelId value)? changeReelId,
@@ -792,6 +1156,8 @@ class _$ChangeTitleImpl implements _ChangeTitle {
     TResult Function(_newReel value)? newReel,
     TResult Function(_deleteReel value)? deleteReel,
     TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
     TResult Function(_ChangeTitle value)? changeTitle,
     TResult Function(_ChangeVideo value)? changeVideo,
     TResult Function(_ChangeReelId value)? changeReelId,
@@ -888,6 +1254,8 @@ class _$ChangeVideoImpl implements _ChangeVideo {
     required TResult Function() newReel,
     required TResult Function() deleteReel,
     required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
     required TResult Function(String title) changeTitle,
     required TResult Function(String video) changeVideo,
     required TResult Function(int reelId) changeReelId,
@@ -902,6 +1270,8 @@ class _$ChangeVideoImpl implements _ChangeVideo {
     TResult? Function()? newReel,
     TResult? Function()? deleteReel,
     TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
     TResult? Function(String title)? changeTitle,
     TResult? Function(String video)? changeVideo,
     TResult? Function(int reelId)? changeReelId,
@@ -916,6 +1286,8 @@ class _$ChangeVideoImpl implements _ChangeVideo {
     TResult Function()? newReel,
     TResult Function()? deleteReel,
     TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
     TResult Function(String title)? changeTitle,
     TResult Function(String video)? changeVideo,
     TResult Function(int reelId)? changeReelId,
@@ -934,6 +1306,8 @@ class _$ChangeVideoImpl implements _ChangeVideo {
     required TResult Function(_newReel value) newReel,
     required TResult Function(_deleteReel value) deleteReel,
     required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
     required TResult Function(_ChangeTitle value) changeTitle,
     required TResult Function(_ChangeVideo value) changeVideo,
     required TResult Function(_ChangeReelId value) changeReelId,
@@ -948,6 +1322,8 @@ class _$ChangeVideoImpl implements _ChangeVideo {
     TResult? Function(_newReel value)? newReel,
     TResult? Function(_deleteReel value)? deleteReel,
     TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
     TResult? Function(_ChangeTitle value)? changeTitle,
     TResult? Function(_ChangeVideo value)? changeVideo,
     TResult? Function(_ChangeReelId value)? changeReelId,
@@ -962,6 +1338,8 @@ class _$ChangeVideoImpl implements _ChangeVideo {
     TResult Function(_newReel value)? newReel,
     TResult Function(_deleteReel value)? deleteReel,
     TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
     TResult Function(_ChangeTitle value)? changeTitle,
     TResult Function(_ChangeVideo value)? changeVideo,
     TResult Function(_ChangeReelId value)? changeReelId,
@@ -1058,6 +1436,8 @@ class _$ChangeReelIdImpl implements _ChangeReelId {
     required TResult Function() newReel,
     required TResult Function() deleteReel,
     required TResult Function() likeReel,
+    required TResult Function() getReelByUser,
+    required TResult Function() getReelByUserId,
     required TResult Function(String title) changeTitle,
     required TResult Function(String video) changeVideo,
     required TResult Function(int reelId) changeReelId,
@@ -1072,6 +1452,8 @@ class _$ChangeReelIdImpl implements _ChangeReelId {
     TResult? Function()? newReel,
     TResult? Function()? deleteReel,
     TResult? Function()? likeReel,
+    TResult? Function()? getReelByUser,
+    TResult? Function()? getReelByUserId,
     TResult? Function(String title)? changeTitle,
     TResult? Function(String video)? changeVideo,
     TResult? Function(int reelId)? changeReelId,
@@ -1086,6 +1468,8 @@ class _$ChangeReelIdImpl implements _ChangeReelId {
     TResult Function()? newReel,
     TResult Function()? deleteReel,
     TResult Function()? likeReel,
+    TResult Function()? getReelByUser,
+    TResult Function()? getReelByUserId,
     TResult Function(String title)? changeTitle,
     TResult Function(String video)? changeVideo,
     TResult Function(int reelId)? changeReelId,
@@ -1104,6 +1488,8 @@ class _$ChangeReelIdImpl implements _ChangeReelId {
     required TResult Function(_newReel value) newReel,
     required TResult Function(_deleteReel value) deleteReel,
     required TResult Function(_likeReel value) likeReel,
+    required TResult Function(_getReelByUser value) getReelByUser,
+    required TResult Function(_getReelByUserId value) getReelByUserId,
     required TResult Function(_ChangeTitle value) changeTitle,
     required TResult Function(_ChangeVideo value) changeVideo,
     required TResult Function(_ChangeReelId value) changeReelId,
@@ -1118,6 +1504,8 @@ class _$ChangeReelIdImpl implements _ChangeReelId {
     TResult? Function(_newReel value)? newReel,
     TResult? Function(_deleteReel value)? deleteReel,
     TResult? Function(_likeReel value)? likeReel,
+    TResult? Function(_getReelByUser value)? getReelByUser,
+    TResult? Function(_getReelByUserId value)? getReelByUserId,
     TResult? Function(_ChangeTitle value)? changeTitle,
     TResult? Function(_ChangeVideo value)? changeVideo,
     TResult? Function(_ChangeReelId value)? changeReelId,
@@ -1132,6 +1520,8 @@ class _$ChangeReelIdImpl implements _ChangeReelId {
     TResult Function(_newReel value)? newReel,
     TResult Function(_deleteReel value)? deleteReel,
     TResult Function(_likeReel value)? likeReel,
+    TResult Function(_getReelByUser value)? getReelByUser,
+    TResult Function(_getReelByUserId value)? getReelByUserId,
     TResult Function(_ChangeTitle value)? changeTitle,
     TResult Function(_ChangeVideo value)? changeVideo,
     TResult Function(_ChangeReelId value)? changeReelId,
@@ -1167,6 +1557,8 @@ mixin _$ReelState {
   bool get isSuccess => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
   List<Reel> get reels => throw _privateConstructorUsedError;
+  List<Reel> get getReelByUser => throw _privateConstructorUsedError;
+  List<Reel> get getReelByUserId => throw _privateConstructorUsedError;
   Reel? get reel => throw _privateConstructorUsedError;
 
   /// Create a copy of ReelState
@@ -1191,6 +1583,8 @@ abstract class $ReelStateCopyWith<$Res> {
       bool isSuccess,
       String errorMessage,
       List<Reel> reels,
+      List<Reel> getReelByUser,
+      List<Reel> getReelByUserId,
       Reel? reel});
 
   $UIStatusCopyWith<$Res> get status;
@@ -1221,6 +1615,8 @@ class _$ReelStateCopyWithImpl<$Res, $Val extends ReelState>
     Object? isSuccess = null,
     Object? errorMessage = null,
     Object? reels = null,
+    Object? getReelByUser = null,
+    Object? getReelByUserId = null,
     Object? reel = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1259,6 +1655,14 @@ class _$ReelStateCopyWithImpl<$Res, $Val extends ReelState>
       reels: null == reels
           ? _value.reels
           : reels // ignore: cast_nullable_to_non_nullable
+              as List<Reel>,
+      getReelByUser: null == getReelByUser
+          ? _value.getReelByUser
+          : getReelByUser // ignore: cast_nullable_to_non_nullable
+              as List<Reel>,
+      getReelByUserId: null == getReelByUserId
+          ? _value.getReelByUserId
+          : getReelByUserId // ignore: cast_nullable_to_non_nullable
               as List<Reel>,
       reel: freezed == reel
           ? _value.reel
@@ -1310,6 +1714,8 @@ abstract class _$$ReelStateImplCopyWith<$Res>
       bool isSuccess,
       String errorMessage,
       List<Reel> reels,
+      List<Reel> getReelByUser,
+      List<Reel> getReelByUserId,
       Reel? reel});
 
   @override
@@ -1340,6 +1746,8 @@ class __$$ReelStateImplCopyWithImpl<$Res>
     Object? isSuccess = null,
     Object? errorMessage = null,
     Object? reels = null,
+    Object? getReelByUser = null,
+    Object? getReelByUserId = null,
     Object? reel = freezed,
   }) {
     return _then(_$ReelStateImpl(
@@ -1379,6 +1787,14 @@ class __$$ReelStateImplCopyWithImpl<$Res>
           ? _value._reels
           : reels // ignore: cast_nullable_to_non_nullable
               as List<Reel>,
+      getReelByUser: null == getReelByUser
+          ? _value._getReelByUser
+          : getReelByUser // ignore: cast_nullable_to_non_nullable
+              as List<Reel>,
+      getReelByUserId: null == getReelByUserId
+          ? _value._getReelByUserId
+          : getReelByUserId // ignore: cast_nullable_to_non_nullable
+              as List<Reel>,
       reel: freezed == reel
           ? _value.reel
           : reel // ignore: cast_nullable_to_non_nullable
@@ -1400,8 +1816,12 @@ class _$ReelStateImpl implements _ReelState {
       this.isSuccess = false,
       this.errorMessage = '',
       final List<Reel> reels = const [],
+      final List<Reel> getReelByUser = const [],
+      final List<Reel> getReelByUserId = const [],
       this.reel})
-      : _reels = reels;
+      : _reels = reels,
+        _getReelByUser = getReelByUser,
+        _getReelByUserId = getReelByUserId;
 
   @override
   @JsonKey()
@@ -1435,12 +1855,30 @@ class _$ReelStateImpl implements _ReelState {
     return EqualUnmodifiableListView(_reels);
   }
 
+  final List<Reel> _getReelByUser;
+  @override
+  @JsonKey()
+  List<Reel> get getReelByUser {
+    if (_getReelByUser is EqualUnmodifiableListView) return _getReelByUser;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_getReelByUser);
+  }
+
+  final List<Reel> _getReelByUserId;
+  @override
+  @JsonKey()
+  List<Reel> get getReelByUserId {
+    if (_getReelByUserId is EqualUnmodifiableListView) return _getReelByUserId;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_getReelByUserId);
+  }
+
   @override
   final Reel? reel;
 
   @override
   String toString() {
-    return 'ReelState(status: $status, notification: $notification, loading: $loading, title: $title, reelId: $reelId, video: $video, isSuccess: $isSuccess, errorMessage: $errorMessage, reels: $reels, reel: $reel)';
+    return 'ReelState(status: $status, notification: $notification, loading: $loading, title: $title, reelId: $reelId, video: $video, isSuccess: $isSuccess, errorMessage: $errorMessage, reels: $reels, getReelByUser: $getReelByUser, getReelByUserId: $getReelByUserId, reel: $reel)';
   }
 
   @override
@@ -1460,6 +1898,10 @@ class _$ReelStateImpl implements _ReelState {
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage) &&
             const DeepCollectionEquality().equals(other._reels, _reels) &&
+            const DeepCollectionEquality()
+                .equals(other._getReelByUser, _getReelByUser) &&
+            const DeepCollectionEquality()
+                .equals(other._getReelByUserId, _getReelByUserId) &&
             (identical(other.reel, reel) || other.reel == reel));
   }
 
@@ -1475,6 +1917,8 @@ class _$ReelStateImpl implements _ReelState {
       isSuccess,
       errorMessage,
       const DeepCollectionEquality().hash(_reels),
+      const DeepCollectionEquality().hash(_getReelByUser),
+      const DeepCollectionEquality().hash(_getReelByUserId),
       reel);
 
   /// Create a copy of ReelState
@@ -1497,6 +1941,8 @@ abstract class _ReelState implements ReelState {
       final bool isSuccess,
       final String errorMessage,
       final List<Reel> reels,
+      final List<Reel> getReelByUser,
+      final List<Reel> getReelByUserId,
       final Reel? reel}) = _$ReelStateImpl;
 
   @override
@@ -1517,6 +1963,10 @@ abstract class _ReelState implements ReelState {
   String get errorMessage;
   @override
   List<Reel> get reels;
+  @override
+  List<Reel> get getReelByUser;
+  @override
+  List<Reel> get getReelByUserId;
   @override
   Reel? get reel;
 

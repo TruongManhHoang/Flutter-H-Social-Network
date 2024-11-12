@@ -12,5 +12,7 @@ class ReelState with _$ReelState {
       @Default(false) bool isSuccess,
       @Default('') String errorMessage,
       @Default([]) List<Reel> reels,
+      @Default([]) List<Reel> getReelByUser,
+      @Default([]) List<Reel> getReelByUserId,
       Reel? reel}) = _ReelState;
 }

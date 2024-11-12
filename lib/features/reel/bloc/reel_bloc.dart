@@ -27,6 +27,7 @@ class ReelBloc extends Bloc<ReelEvent, ReelState> {
     _reelService = reelService;
     _localStorageService = localStorageService;
     on<_getReel>(_onGetReel);
+    on<_getReelByUser>(_onGetReelByUser);
     on<_newReel>(_onNewReel);
     on<_deleteReel>(_onDeleteReel);
     on<_likeReel>(_onLikeReel);
@@ -46,6 +47,28 @@ class ReelBloc extends Bloc<ReelEvent, ReelState> {
         List<Reel> reels =
             reelsJson.map((json) => Reel.fromJson(json)).toList();
         emit(state.copyWith(reels: reels, loading: false, isSuccess: true));
+      } else {
+        throw Exception('Response does not contain "items"');
+      }
+    } catch (e) {
+      emit(state.copyWith(
+          loading: false,
+          isSuccess: false,
+          errorMessage: 'Failed to load items: ${e.toString()}'));
+    }
+  }
+
+  void _onGetReelByUser(_getReelByUser event, Emitter<ReelState> emit) async {
+    try {
+      emit(state.copyWith(loading: true, notification: null));
+      String token = _localStorageService.getString(key: AppKeys.token) ?? '';
+      dynamic response = await _reelService.getReelByUser(token);
+      if (response.data != null && response.data['result'] != null) {
+        List<dynamic> reelsJson = response.data['result'];
+        List<Reel> reels =
+            reelsJson.map((json) => Reel.fromJson(json)).toList();
+        emit(state.copyWith(
+            getReelByUser: reels, loading: false, isSuccess: true));
       } else {
         throw Exception('Response does not contain "items"');
       }

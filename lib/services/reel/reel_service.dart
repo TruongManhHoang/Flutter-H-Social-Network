@@ -50,9 +50,9 @@ class ReelService {
     }
   }
 
-  Future<dynamic> followUser(String token, int id) async {
+  Future<dynamic> getReelByUser(String token) async {
     try {
-      final res = await dio.put('/users/follow/$id',
+      final res = await dio.get('/reels/user',
           options: Options(headers: {'Authorization': 'Bearer $token'}));
       return res;
     } catch (e) {

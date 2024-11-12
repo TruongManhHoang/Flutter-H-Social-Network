@@ -6,6 +6,8 @@ class ReelEvent with _$ReelEvent {
   const factory ReelEvent.newReel() = _newReel;
   const factory ReelEvent.deleteReel() = _deleteReel;
   const factory ReelEvent.likeReel() = _likeReel;
+  const factory ReelEvent.getReelByUser() = _getReelByUser;
+  const factory ReelEvent.getReelByUserId() = _getReelByUserId;
   // const factory HomeEvent.getPostById() = _getPostById;
 
   // const factory ReelEvent.changeCaption(String caption) = _ChangeCaption;

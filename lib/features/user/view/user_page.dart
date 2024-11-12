@@ -4,6 +4,7 @@ import 'package:boilerplate/features/comment/bloc/comment_bloc.dart';
 import 'package:boilerplate/features/home/bloc/home_bloc.dart';
 import 'package:boilerplate/features/home/hello.dart';
 import 'package:boilerplate/features/home/model/post.dart';
+import 'package:boilerplate/features/reel/bloc/reel_bloc.dart';
 import 'package:boilerplate/features/temp/home_bottom.dart';
 import 'package:boilerplate/features/temp/siderBar.dart';
 import 'package:boilerplate/features/user/bloc/user_bloc.dart';
@@ -25,6 +26,7 @@ class UserPage extends StatefulWidget {
 class _UserPageState extends State<UserPage> {
   late UserBloc _userBloc;
   late HomeBloc _homeBloc;
+  late ReelBloc _reelBloc;
   late CommentBloc _commentBloc;
 
   @override
@@ -32,6 +34,7 @@ class _UserPageState extends State<UserPage> {
     super.initState();
     _userBloc = Injector.instance<UserBloc>()..add(UserEvent.getProfileUser());
     _homeBloc = Injector.instance<HomeBloc>()..add(HomeEvent.getPostByUser());
+    _reelBloc = Injector.instance<ReelBloc>()..add(ReelEvent.getReelByUser());
     _commentBloc = Injector.instance<CommentBloc>();
   }
 
@@ -40,6 +43,7 @@ class _UserPageState extends State<UserPage> {
     _userBloc.close();
     _homeBloc.close();
     _commentBloc.close();
+    _reelBloc.close();
     super.dispose();
   }
 
@@ -51,6 +55,7 @@ class _UserPageState extends State<UserPage> {
         BlocProvider<UserBloc>.value(value: _userBloc),
         BlocProvider<HomeBloc>.value(value: _homeBloc),
         BlocProvider<CommentBloc>.value(value: _commentBloc),
+        BlocProvider<ReelBloc>.value(value: _reelBloc),
       ],
       child: Scaffold(
         body: Row(
@@ -667,9 +672,47 @@ class __BodyState extends State<_Body> {
                                         child: Text('Error loading posts'));
                                   }
                                 })),
-                            Center(
-                              child: Text('Tagged Content'),
-                            ),
+                            SizedBox(
+                        height: 300,
+                        child: TabBarView(
+                          children: [
+                            Container(
+                                height: 600,
+                                child: BlocBuilder<ReelBloc, ReelState>(
+                                    builder: (context, state) {
+                                  if (state.loading) {
+                                    return Center(
+                                      child: CircularProgressIndicator(),
+                                    );
+                                  } else if (state.isSuccess) {
+                                    return GridView.builder(
+                                      physics: BouncingScrollPhysics(),
+                                      gridDelegate:
+                                          SliverGridDelegateWithFixedCrossAxisCount(
+                                              crossAxisCount: 3,
+                                              childAspectRatio: 0.65),
+                                      itemCount: state.getReelByUser.length,
+                                      itemBuilder: (context, index) {
+                                        final reel = state.getReelByUser[index];
+                                        return GestureDetector(
+                                          onTap: () {
+                                            // showPost(post);
+                                          },
+                                          // làm nốt show video reel
+                                          // child: Image.network(
+                                          //   post.image,
+                                          //   fit: BoxFit.cover,
+                                          //   width: double.infinity,
+                                          //   height: 100,
+                                          // ),
+                                        );
+                                      },
+                                    );
+                                  } else {
+                                    return Center(
+                                        child: Text('Error loading posts'));
+                                  }
+                                })),
                             Container(
                               height: 600,
                               child: GridView.builder(
