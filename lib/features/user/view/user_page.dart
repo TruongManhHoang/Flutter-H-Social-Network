@@ -746,7 +746,9 @@ class __BodyState extends State<_Body> {
                   ),
                 ),
               ],
-            );
+            )
+          )
+          ]);
           } else if (state.errorMessage != null) {
             return Center(
               child: Text(state.errorMessage!),
